@@ -1,0 +1,22 @@
+.image-bg-blue {
+    background-color: #165b99 !important;
+}
+
+.image-bg-red {
+    background-color: #EF4135 !important;
+}
+
+.image-padding {
+    padding: 2em !important;
+}
+
+.centered.image.image-padding img {
+    height: 135px !important;
+}
+
+.card-institution-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
