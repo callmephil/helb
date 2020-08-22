@@ -51,3 +51,21 @@ iframe:hover {
 .padding-none {
   padding: 0 !important;
 }
+
+.width-100 {
+  width: 100%;
+}
+
+/* Safari is overriding position rules place them as important */
+/* This is for modal closing button */
+.ui.modal > .close {
+  top: -2.5rem !important;
+  right: -2.5rem !important;
+  color: #fff !important;
+}
+
+/* Safari is overriding position rules place them as important */
+/* This is for modal fixed menu on top. fixed position will not respect the modal box replaced by absolute */
+.ui.modal > .content > .ui.menu.fixed {
+  position: absolute !important;
+}
