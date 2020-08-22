@@ -43,3 +43,11 @@ iframe:hover {
   margin-top: 10px;
   align-items: center;
 }
+
+.button-group-spacing {
+  margin: 2px 0 !important;  
+}
+
+.padding-none {
+  padding: 0 !important;
+}

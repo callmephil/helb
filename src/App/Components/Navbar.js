@@ -1,9 +1,10 @@
 // @ts-nocheck
 import _ from "lodash";
-import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
-import { createMedia } from "@artsy/fresnel";
 import { NavLink } from "react-router-dom";
+import React, { useState, Fragment } from "react";
+import { createMedia } from "@artsy/fresnel";
+import AuthModal from "../../Auth/AuthModal";
 import { Visibility, Segment, Menu, Container, Button, Sidebar, Icon } from "semantic-ui-react";
 
 const leftItems = [
@@ -17,9 +18,9 @@ const leftItems = [
 ];
 
 const rightItems = [
-  { to: "/profile", name: "Profile", style: { marginLeft: "0.3em" } },
-  { to: "/login", name: "Login", style: { marginLeft: "0.3em" } },
-  { to: "/register", name: "Register", style: { marginLeft: "0.3em" } },
+  { to: "/profile", name: "Profile", style: { marginRight: "0.6em" } },
+  // { to: "/login", name: "Login", style: { marginLeft: "0.3em" } },
+  // { to: "/register", name: "Register", style: { marginLeft: "0.3em" } },
 ];
 
 const { MediaContextProvider, Media } = createMedia({
@@ -72,6 +73,7 @@ function DesktopContainer({ children }) {
                     {...item}
                   />
                 ))}
+                <AuthModal parent={<Menu.Item content="Sign-In" />} />
               </Menu.Menu>
             </Container>
           </Menu>
@@ -133,10 +135,16 @@ function MobileContainer({ children }) {
                 </Menu.Item>
                 <Menu.Item position="right">
                   {_.map(rightItems, (item) => (
-                    <Button as={NavLink} key={item.name} inverted {...item}>
+                    <Button
+                      as={NavLink}
+                      key={item.name}
+                      inverted
+                      {...item}
+                      onClick={() => setActiveItem(item.name)}>
                       {item.name}
                     </Button>
-                  ))}
+                  ))}                
+                  <AuthModal parent={<Button inverted content="Sign-In" />} />
                 </Menu.Item>
               </Menu>
             </Container>
@@ -160,10 +168,10 @@ const ResponsiveContainer = ({ children }) => (
    */
   <Fragment>
     <MediaContextProvider>
-      <DesktopContainer>{children}</DesktopContainer>
+      <DesktopContainer children={children} />
     </MediaContextProvider>
     <MediaContextProvider>
-      <MobileContainer>{children}</MobileContainer>
+      <MobileContainer children={children} />
     </MediaContextProvider>
   </Fragment>
 );

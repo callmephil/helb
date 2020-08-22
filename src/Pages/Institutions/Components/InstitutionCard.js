@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React from "react";
-import { utils } from "../../../Utils";
 import { Link } from "react-router-dom";
+import { makeKeyOfObject } from "../../../Utils/ComponentHelpers";
 import { Card, Image, Icon, Button, Label } from "semantic-ui-react";
 
 export default function InstitutionCard({ cardContent }) {
@@ -60,7 +60,7 @@ export default function InstitutionCard({ cardContent }) {
       </Card.Content>
 
       {_.map(links, (link) => (
-        <ContentLinks key={utils.makeKeyOfObject(link)} {...link} />
+        <ContentLinks key={makeKeyOfObject(link)} {...link} />
       ))}
       <Card.Content extra>
         <a href="tel:7094510">
