@@ -5,19 +5,35 @@ import { NavLink } from "react-router-dom";
 import React, { useState, Fragment } from "react";
 import { createMedia } from "@artsy/fresnel";
 import AuthModal from "../../Auth/AuthModal";
-import { Visibility, Segment, Menu, Container, Button, Sidebar, Icon } from "semantic-ui-react";
+import {
+  Visibility,
+  Segment,
+  Menu,
+  Container,
+  Button,
+  Sidebar,
+  Icon,
+  Dropdown,
+} from "semantic-ui-react";
 
 const leftItems = [
   { to: "/", name: "Home", exact: true },
   { to: "/institutions", name: "Institutions" },
   { to: "/fundings", name: "Fundings" },
-  { to: "/volunteers", name: "Volunteers" },
-  { to: "/Housing", name: "Housing" },
   { to: "/media", name: "Media Feed" },
   { to: "/memorial", name: "Memorial" },
 ];
 
 const rightItems = [
+  {
+    to: "/services",
+    name: "Services",
+    sub: [
+      { to: "/services/health", name: "Health Care" },
+      { to: "/services/renovation", name: "Renovations" },
+      { to: "/services/housing", name: "Housing" },
+    ],
+  },
   { to: "/profile", name: "Profile", style: { marginRight: "0.6em" } },
   // { to: "/login", name: "Login", style: { marginLeft: "0.3em" } },
   // { to: "/register", name: "Register", style: { marginLeft: "0.3em" } },
@@ -53,18 +69,8 @@ function DesktopContainer({ children }) {
             secondary={!fixedMenu}
             size="large">
             <Container>
-              {_.map(leftItems, (item) => (
-                <Menu.Item
-                  as={NavLink}
-                  key={item.name}
-                  active={activeItem === item.name}
-                  onClick={() => setActiveItem(item.name)}
-                  {...item}
-                />
-              ))}
-
-              <Menu.Menu position="right">
-                {_.map(rightItems, (item) => (
+              {_.map(leftItems, (item) => {
+                return (
                   <Menu.Item
                     as={NavLink}
                     key={item.name}
@@ -72,7 +78,39 @@ function DesktopContainer({ children }) {
                     onClick={() => setActiveItem(item.name)}
                     {...item}
                   />
-                ))}
+                );
+              })}
+
+              <Menu.Menu position="right">
+                {_.map(rightItems, (item) => {
+                  if (item?.sub) {
+                    return (
+                      <Dropdown item text={item.name}>
+                        <Dropdown.Menu>
+                          {_.map(item.sub, (sub) => (
+                            <Dropdown.Item
+                              as={NavLink}
+                              key={sub.name}
+                              active={activeItem === sub.name}
+                              onClick={() => setActiveItem(sub.name)}
+                              {...sub}
+                              content={sub.name}
+                            />
+                          ))}
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    );
+                  } else
+                    return (
+                      <Menu.Item
+                        as={NavLink}
+                        key={item.name}
+                        active={activeItem === item.name}
+                        onClick={() => setActiveItem(item.name)}
+                        {...item}
+                      />
+                    );
+                })}
                 <AuthModal parent={<Menu.Item content="Sign-In" />} />
               </Menu.Menu>
             </Container>
@@ -111,15 +149,17 @@ function MobileContainer({ children }) {
           onHide={handleSidebarHide}
           vertical
           visible={visible}>
-          {_.map(leftItems, (item) => (
-            <Menu.Item
-              as={NavLink}
-              key={item.name}
-              active={activeItem === item.name}
-              onClick={handleItemClick}
-              {...item}
-            />
-          ))}
+          {_.map(leftItems, (item) => {
+            return (
+              <Menu.Item
+                as={NavLink}
+                key={item.name}
+                active={activeItem === item.name}
+                onClick={() => setActiveItem(item.name)}
+                {...item}
+              />
+            );
+          })}
         </Sidebar>
 
         <Sidebar.Pusher dimmed={visible}>
@@ -134,16 +174,36 @@ function MobileContainer({ children }) {
                   <Icon size="large" name="sidebar" />
                 </Menu.Item>
                 <Menu.Item position="right">
-                  {_.map(rightItems, (item) => (
-                    <Button
-                      as={NavLink}
-                      key={item.name}
-                      inverted
-                      {...item}
-                      onClick={() => setActiveItem(item.name)}>
-                      {item.name}
-                    </Button>
-                  ))}                
+                  {_.map(rightItems, (item) => {
+                    if (item?.sub) {
+                      return (
+                        <Dropdown item text={item.name}>
+                          <Dropdown.Menu>
+                            {_.map(item.sub, (sub) => (
+                              <Dropdown.Item
+                                as={NavLink}
+                                key={sub.name}
+                                active={activeItem === sub.name}
+                                onClick={handleItemClick}
+                                {...sub}
+                                content={sub.name}
+                              />
+                            ))}
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      );
+                    } else
+                      return (
+                        <Button
+                          as={NavLink}
+                          key={item.name}
+                          inverted
+                          {...item}
+                          onClick={handleItemClick}>
+                          {item.name}
+                        </Button>
+                      );
+                  })}
                   <AuthModal parent={<Button inverted content="Sign-In" />} />
                 </Menu.Item>
               </Menu>

@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Fragment } from "react";
+import { Route } from "react-router-dom";
 import ResponsiveContainer from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { Container } from "semantic-ui-react";
@@ -10,8 +10,7 @@ import {
   InstitutionsPage,
   MediaPage,
   MemorialPage,
-  Volunteers,
-  HousingPage,
+  Services,
 } from "../Pages";
 
 import "./App.css";
@@ -19,7 +18,7 @@ import "./App.css";
 function App() {
 
   return (
-    <Router>
+    <Fragment>
       <ResponsiveContainer>
         <Container className="main-container">
           <Route path="/" exact render={() => <HomePage />} />
@@ -27,13 +26,12 @@ function App() {
           <Route path="/fundings" exact render={() => <FundingPage />} />
           <Route path="/media" exact render={() => <MediaPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />
-          <Route path="/volunteers" exact render={() => <Volunteers />} />
-          <Route path="/housing" exact render={() => <HousingPage />} />
+          <Route path="/services" render={() => <Services />} />
           <Route path="/profile" exact render={() => <ProfilePage />} />
         </Container>
       </ResponsiveContainer>
       <Footer />
-    </Router>
+    </Fragment>
   );
 }
 
