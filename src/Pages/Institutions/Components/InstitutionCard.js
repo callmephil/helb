@@ -1,11 +1,10 @@
 import _ from "lodash";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment } from "react";
 import { makeKeyOfObject } from "../../../Utils/ComponentHelpers";
 import { Card, Image, Icon, Button, Label } from "semantic-ui-react";
 
 export default function InstitutionCard({ cardContent }) {
-  const { image, institutionName, description, links, labels, meta } = cardContent;
+  const { image, name, description, website, location, extra, labels, meta } = cardContent;
 
   const CardMeta = ({ labels, by, date, cardId }) => {
     return (
@@ -34,13 +33,31 @@ export default function InstitutionCard({ cardContent }) {
     );
   };
 
-  const ContentLinks = ({ src, icon, text }) => {
+  const ContentExtra = ({ src, type }) => {
+    const obj = {
+      text: "Unknown",
+      icon: "stop circle outline",
+    };
+    switch (type) {
+      case 0:
+        obj.text = "Donate";
+        obj.icon = "money bill alternate outline";
+        break;
+      case 1:
+        obj.text = "Contact";
+        obj.icon = "address card outline";
+        break;
+      default:
+        return <Fragment></Fragment>;
+    }
+
     return (
       <Card.Content extra>
-        <Link to={src}>
-          <Icon name={icon} />
-          {text}
-        </Link>
+        <a href={src} target="_blank" rel="noopener noreferrer">
+          {/* @ts-ignore */}
+          <Icon name={obj.icon} />
+          {obj.text}
+        </a>
       </Card.Content>
     );
   };
@@ -53,21 +70,25 @@ export default function InstitutionCard({ cardContent }) {
         ui={false}
         src={image.src}
         className={`image-padding ${image.backgroundColor}`}
+        as="a"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={website}
+        label={{
+          color: "black",
+          ribbon: true,
+          icon: "map marker alternate",
+          content: location,
+        }}
       />
       <Card.Content>
-        <Card.Header content={institutionName} />
+        <Card.Header content={name} />
         <Card.Description content={description} />
       </Card.Content>
 
-      {_.map(links, (link) => (
-        <ContentLinks key={makeKeyOfObject(link)} {...link} />
+      {_.map(extra, (link) => (
+        <ContentExtra key={makeKeyOfObject(link)} {...link} />
       ))}
-      <Card.Content extra>
-        <a href="tel:7094510">
-          <Icon name="phone" />
-          Call
-        </a>
-      </Card.Content>
       <CardMeta labels={labels} {...meta} />
     </Card>
   );

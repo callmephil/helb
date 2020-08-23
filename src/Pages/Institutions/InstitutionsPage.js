@@ -11,23 +11,23 @@ const staticCards = [
       src: "https://offrejoie.org/wp-content/uploads/2020/08/offrejoie-logo.png",
       backgroundColor: "image-bg-blue",
     },
-    institutionName: "Offre Joie",
+    name: "Offre Joie",
     description: `Offrejoie was born in the midst of a raging civil war in Lebanon in 1985. A group of young
         Red Cross volunteers worked together to help the injured. Alleviating human suffering
         transcended any differences between them.`,
-    links: [
+    website: "https://offrejoie.org/",
+    location: "Lebanon",
+    extra: [
       {
-        src: "/offre-joie.com/donate",
-        icon: "money bill alternate outline",
-        text: "Donate",
-      },
+        type: 0,
+        src: "https://offrejoie.org/donate/",
+      }, 
       {
-        src: "/offre-joie.com/volunteer",
-        icon: "handshake outline",
-        text: "Volunteer",
+        type: 1,
+        src: "https://offrejoie.org/contact-us/",
       },
     ],
-    labels: ["shelters", "rebuilt", "something else"],
+    labels: ["Housing", "Looking for volunteers", ],
     meta: {
       by: "Helb",
       date: "20/08/20",
@@ -39,21 +39,21 @@ const staticCards = [
       src: "https://www.caritas.org/wordpress/wp-content/uploads/2017/04/logo_large-1.png",
       backgroundColor: "image-bg-red",
     },
-    institutionName: "Caritas",
+    name: "Caritas",
     description: `Caritas Internationalis reflects the social mission and core values of the Catholic Church. We believe in dignity, solidarity and stewardship on behalf of the world’s most vulnerable people.`,
-    links: [
+    website: "http://www.caritas.org.lb",
+    location: "Lebanon",
+    extra: [
       {
-        src: "/offre-joie.com/donate",
-        icon: "money bill alternate outline",
-        text: "Donate",
-      },
+        type: 0,
+        src: "http://www.caritas.org.lb/get_involved/donate",
+      }, 
       {
-        src: "/offre-joie.com/volunteer",
-        icon: "handshake outline",
-        text: "Volunteer",
+        type: 1,
+        src: "http://www.caritas.org.lb/contact_us",
       },
     ],
-    labels: ["shelters", "rebuilt"],
+    labels: ["Food", "Housing", "Health", "Looking for volunteers"],
     meta: {
       by: "Helb",
       date: "20/08/20",
