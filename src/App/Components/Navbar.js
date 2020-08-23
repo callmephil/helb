@@ -11,10 +11,10 @@ const leftItems = [
   { to: "/", name: "Home", exact: true },
   { to: "/institutions", name: "Institutions" },
   { to: "/fundings", name: "Fundings" },
-  { to: "/media", name: "Media Feed" },
-  { to: "/missings", name: "Missings" },
   { to: "/volunteers", name: "Volunteers" },
   { to: "/shelters", name: "Shelters" },
+  { to: "/media", name: "Media Feed" },
+  { to: "/memorial", name: "Memorial" },
 ];
 
 const rightItems = [

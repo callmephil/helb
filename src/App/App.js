@@ -9,7 +9,7 @@ import {
   FundingPage,
   InstitutionsPage,
   MediaPage,
-  MissingPage,
+  MemorialPage,
   Volunteers,
   Shelters,
 } from "../Pages";
@@ -26,7 +26,7 @@ function App() {
           <Route path="/institutions" exact render={() => <InstitutionsPage />} />
           <Route path="/fundings" exact render={() => <FundingPage />} />
           <Route path="/media" exact render={() => <MediaPage />} />
-          <Route path="/missings" exact render={() => <MissingPage />} />
+          <Route path="/memorial" exact render={() => <MemorialPage />} />
           <Route path="/volunteers" exact render={() => <Volunteers />} />
           <Route path="/shelters" exact render={() => <Shelters />} />
           <Route path="/profile" exact render={() => <ProfilePage />} />
