@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Menu } from "semantic-ui-react";
 import LoginForm from "./Components/LoginForm";
-import { isMobileOrTablet, isTablet, isDesktop } from "../Utils/ComponentHelpers";
+import { isMobileOrTablet, isDesktop } from "../Utils/ComponentHelpers";
 import SignupForm from "./Components/SignupForm";
 
 export default function AuthModal({ parent }) {
