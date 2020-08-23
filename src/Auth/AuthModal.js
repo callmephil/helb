@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Modal, Menu } from "semantic-ui-react";
 import LoginForm from "./Components/LoginForm";
-import { isMobileOrTablet, isTablet } from "../Utils/ComponentHelpers";
+import { isMobileOrTablet, isTablet, isDesktop } from "../Utils/ComponentHelpers";
 import SignupForm from "./Components/SignupForm";
-
-const getModalSize = () => (isTablet() ? "small" : "mini");
 
 export default function AuthModal({ parent }) {
   const [open, setOpen] = useState(false);
@@ -13,15 +11,14 @@ export default function AuthModal({ parent }) {
 
   return (
     <Modal
-      closeIcon
+      closeIcon={isDesktop()}
       open={open}
       trigger={parent}
-    //   dimmer="blurring"
       closeOnEscape={false}
-      size={getModalSize()}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
       closeOnDimmerClick={isMobileOrTablet()}
+      style={{maxWidth: '450px', }}
       >
       <Modal.Content>
         <Menu inverted pointing size="huge" fixed="top" fluid widths={2}>
