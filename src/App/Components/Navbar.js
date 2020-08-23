@@ -12,7 +12,7 @@ const leftItems = [
   { to: "/institutions", name: "Institutions" },
   { to: "/fundings", name: "Fundings" },
   { to: "/volunteers", name: "Volunteers" },
-  { to: "/shelters", name: "Shelters" },
+  { to: "/Housing", name: "Housing" },
   { to: "/media", name: "Media Feed" },
   { to: "/memorial", name: "Memorial" },
 ];

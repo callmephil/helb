@@ -11,7 +11,7 @@ import {
   MediaPage,
   MemorialPage,
   Volunteers,
-  Shelters,
+  HousingPage,
 } from "../Pages";
 
 import "./App.css";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/media" exact render={() => <MediaPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />
           <Route path="/volunteers" exact render={() => <Volunteers />} />
-          <Route path="/shelters" exact render={() => <Shelters />} />
+          <Route path="/housing" exact render={() => <HousingPage />} />
           <Route path="/profile" exact render={() => <ProfilePage />} />
         </Container>
       </ResponsiveContainer>

@@ -2,11 +2,11 @@ import React from 'react'
 import { Container } from 'semantic-ui-react'
 import PageHeadings from '../Components/PageHeadings'
 
-export default function Shelters() {
+export default function HousingPage() {
     return (
         <Container style={{ padding: "4em 0em" }}>
         <PageHeadings
-          title="Shelters"
+          title="Housing"
           description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
