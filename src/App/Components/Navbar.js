@@ -26,7 +26,6 @@ const leftItems = [
 
 const rightItems = [
   {
-    to: "/volunteers",
     name: "Volunteers",
     sub: [
       { to: "/volunteers/health", name: "Health Care" },
@@ -34,7 +33,7 @@ const rightItems = [
       { to: "/volunteers/housing", name: "Housing" },
     ],
   },
-  { to: "/profile", name: "Profile", style: { marginRight: "0.6em" } },
+  { to: "/profile", name: "Profile" },
   // { to: "/login", name: "Login", style: { marginLeft: "0.3em" } },
   // { to: "/register", name: "Register", style: { marginLeft: "0.3em" } },
 ];
@@ -128,7 +127,7 @@ DesktopContainer.propTypes = {
 };
 
 function MobileContainer({ children }) {
-  const [activeItem, setActiveItem] = useState("Home");
+  const [activeItem, setActiveItem] = useState("");
   const [visible, setVisible] = useState(false);
 
   const handleItemClick = (e, { name }) => {
@@ -143,8 +142,9 @@ function MobileContainer({ children }) {
     <Media as={Sidebar.Pushable} lessThan="computer">
       <Sidebar.Pushable>
         <Sidebar
+          width="thin"
           as={Menu}
-          animation="overlay"
+          animation="push"
           inverted
           onHide={handleSidebarHide}
           vertical
@@ -155,10 +155,30 @@ function MobileContainer({ children }) {
                 as={NavLink}
                 key={item.name}
                 active={activeItem === item.name}
-                onClick={() => setActiveItem(item.name)}
+                onClick={handleItemClick}
                 {...item}
               />
             );
+          })}
+          {_.map(rightItems, (item) => {
+            if (item?.sub) {
+              return (
+                <Dropdown item text={item.name} position>
+                  <Dropdown.Menu>
+                    {_.map(item.sub, (sub) => (
+                      <Dropdown.Item
+                        as={NavLink}
+                        key={sub.name}
+                        active={activeItem === sub.name}
+                        onClick={handleItemClick}
+                        {...sub}
+                        content={sub.name}
+                      />
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
+              );
+            }
           })}
         </Sidebar>
 
@@ -175,31 +195,14 @@ function MobileContainer({ children }) {
                 </Menu.Item>
                 <Menu.Item position="right">
                   {_.map(rightItems, (item) => {
-                    if (item?.sub) {
-                      return (
-                        <Dropdown item text={item.name}>
-                          <Dropdown.Menu>
-                            {_.map(item.sub, (sub) => (
-                              <Dropdown.Item
-                                as={NavLink}
-                                key={sub.name}
-                                active={activeItem === sub.name}
-                                onClick={handleItemClick}
-                                {...sub}
-                                content={sub.name}
-                              />
-                            ))}
-                          </Dropdown.Menu>
-                        </Dropdown>
-                      );
-                    } else
+                    if (!item?.sub)
                       return (
                         <Button
                           as={NavLink}
                           key={item.name}
                           inverted
                           {...item}
-                          onClick={handleItemClick}>
+                          style={{ marginRight: "0.3em", marginLeft: "0.3em" }}>
                           {item.name}
                         </Button>
                       );

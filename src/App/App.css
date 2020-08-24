@@ -69,3 +69,7 @@ iframe:hover {
 .ui.modal > .content > .ui.menu.fixed {
   position: absolute !important;
 }
+
+div.ui.inverted.vertical.left.visible.sidebar.menu {
+  overflow: visible !important;
+}
