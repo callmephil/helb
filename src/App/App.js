@@ -10,10 +10,12 @@ import {
   InstitutionsPage,
   MediaPage,
   MemorialPage,
-  Services,
 } from "../Pages";
 
 import "./App.css";
+import HealthCarePage from "../Pages/VolunteersPage/HealthCarePage";
+import RenovationsPage from "../Pages/VolunteersPage/RenovationsPage";
+import HousingPage from "../Pages/VolunteersPage/HousingPage";
 
 function App() {
 
@@ -26,7 +28,9 @@ function App() {
           <Route path="/fundings" exact render={() => <FundingPage />} />
           <Route path="/media" exact render={() => <MediaPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />
-          <Route path="/services" render={() => <Services />} />
+          <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />
+          <Route path="/volunteers/renovation" exact render={() => <RenovationsPage />} />
+          <Route path="/volunteers/housing" exact render={() => <HousingPage />} />
           <Route path="/profile" exact render={() => <ProfilePage />} />
         </Container>
       </ResponsiveContainer>

@@ -26,12 +26,12 @@ const leftItems = [
 
 const rightItems = [
   {
-    to: "/services",
-    name: "Services",
+    to: "/volunteers",
+    name: "Volunteers",
     sub: [
-      { to: "/services/health", name: "Health Care" },
-      { to: "/services/renovation", name: "Renovations" },
-      { to: "/services/housing", name: "Housing" },
+      { to: "/volunteers/health", name: "Health Care" },
+      { to: "/volunteers/renovation", name: "Renovations" },
+      { to: "/volunteers/housing", name: "Housing" },
     ],
   },
   { to: "/profile", name: "Profile", style: { marginRight: "0.6em" } },
