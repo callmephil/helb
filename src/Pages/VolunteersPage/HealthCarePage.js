@@ -1,6 +1,36 @@
 import React from "react";
 import PageHeadings from "../Components/PageHeadings";
 import { Container } from "semantic-ui-react";
+import VolunteerCard from "./Components/VolunteerCard";
+
+const _struct = {
+  type: "Medical Assistance",
+  status: "Available",
+  updated: "24/08/20",
+  location: "Home services",
+  contact: {
+    name: "Mohammed Yazbek",
+    phones: ["70362055", ],
+  },
+  serviceType: "Physiotherapy",
+  social: [
+    // {
+    //   type: "facebook",
+    //   src: "https://facebook.com",
+    // },
+    {
+      type: "instagram",
+      src: "https://www.instagram.com/hope_lebanon/",
+    },
+  ],
+  description: `No description`,
+  labels: ["Free"],
+  meta: {
+    by: "Helb",
+    date: "24/08/20",
+    cardId: 1,
+  },
+};
 
 export default function HealthCarePage() {
   return (
@@ -14,6 +44,8 @@ export default function HealthCarePage() {
                 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
                 est laborum.`}
       />
+      <VolunteerCard {..._struct}/>
+
     </Container>
   );
 }

@@ -73,3 +73,7 @@ iframe:hover {
 div.ui.inverted.vertical.left.visible.sidebar.menu {
   overflow: visible !important;
 }
+
+.align-center {
+  text-align: center;
+}
