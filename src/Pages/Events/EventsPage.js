@@ -1,8 +1,8 @@
+import _ from "lodash";
 import React from "react";
-import { Container, Card, Grid, Divider } from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
 import PageHeadings from "../Components/PageHeadings";
 import SocialCard from "./Components/SocialCard";
-import _ from "lodash";
 
 import "./EventsPage.css";
 

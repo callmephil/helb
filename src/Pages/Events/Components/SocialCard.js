@@ -7,7 +7,7 @@ import { Card, Icon, Label, Button } from "semantic-ui-react";
 
 const { REACT_APP_FB_ID } = process.env;
 
-const CardMeta = ({ labels, by, date, cardId }) => {
+const CardMeta = ({ labels, by, date, cardId, type, url }) => {
   return (
     <Card.Content extra>
       <Card.Meta>
@@ -24,6 +24,19 @@ const CardMeta = ({ labels, by, date, cardId }) => {
           <Icon name="calendar outline" />
           {date}
         </span>
+        <div>
+          <Icon name="arrow right" />
+          <Button
+            size="mini"
+            circular
+            color={type === "instagram" ? "google plus" : type}
+            icon={type}
+            as={"a"}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </div>
       </div>
     </Card.Content>
   );
@@ -98,25 +111,12 @@ export default function SocialCard({ url }) {
           style={{ fontWeight: 600, fontSize: "1.2em", lineHeight: "1.28571429em" }}>
           {type}
         </span>
-        <div style={{ float: "right" }}>
-          <Icon name="arrow right"></Icon>
-          <Button
-            size="small"
-            circular
-            color={type === "instagram" ? "google plus" : type}
-            icon={type}
-            as={"a"}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
-        </div>
       </Card.Content>
       <Card.Content className="card-no-padding">
         <EmbedSocialCard type={type} url={url} />
       </Card.Content>
 
-      <CardMeta labels={labels} {...meta} />
+      <CardMeta labels={labels} {...meta} type={type} url={url} />
     </Card>
   );
 }
