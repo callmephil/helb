@@ -28,9 +28,9 @@ const rightItems = [
   {
     name: "Volunteers",
     sub: [
-      { to: "/volunteers/health", name: "Health Care" },
-      { to: "/volunteers/renovation", name: "Renovations" },
-      { to: "/volunteers/housing", name: "Housing" },
+      { to: "/volunteers/health", name: "Health Care", icon: 'heartbeat' },
+      { to: "/volunteers/renovation", name: "Renovations", icon: 'dolly' },
+      { to: "/volunteers/housing", name: "Housing", icon: 'home' },
     ],
   },
   { to: "/profile", name: "Profile" },
