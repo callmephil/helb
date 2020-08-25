@@ -1,6 +1,17 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
+import { Container, Card } from "semantic-ui-react";
 import PageHeadings from "../Components/PageHeadings";
+import SocialCard from "./Components/SocialCard";
+import _ from "lodash";
+
+const data = [
+  "https://www.instagram.com/p/CDq5WKLn1E8/",
+  "https://twitter.com/AnisTabet23/status/1292343373353885698",
+  "https://www.instagram.com/p/CDq23qEHJw3/",
+  "https://www.instagram.com/p/CDpJPgpnrTr/",
+  "https://twitter.com/AnisTabet23/status/1293114912672231424",
+  "https://www.facebook.com/109020704256138/photos/a.109047247586817/109128447578697/",
+];
 
 export default function EventsPage() {
   return (
@@ -14,6 +25,12 @@ export default function EventsPage() {
             sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum.`}
       />
+
+      <Card.Group stackable doubling itemsPerRow={3}>
+        {_.map(data, (url) => (
+          <SocialCard key={url} url={url} />
+        ))}
+      </Card.Group>
     </Container>
   );
 }

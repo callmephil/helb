@@ -77,3 +77,25 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
 .align-center {
   text-align: center;
 }
+
+/* Initially made for event page */
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.no-grow {
+  flex-grow: 0 !important;
+}
+
+.instagram-media.instagram-media-rendered {
+  min-width: 0 !important;
+}
+
+.card-no-padding {
+  padding: 1em 0 !important;
+}
+
+.card-no-padding iframe {
+  border: none !important;
+}
