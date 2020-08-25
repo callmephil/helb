@@ -90,7 +90,7 @@ const labels = ["Fund Raising", "Gathering", "Outdoor"];
 export default function SocialCard({ url }) {
   const type = getTypeFromUrl(url);
   return (
-    <Card>
+    <Card fluid>
       <Card.Content className="no-grow">
         <Label color="black" ribbon icon="map marker alternate" content="location" />
         <span
@@ -99,19 +99,19 @@ export default function SocialCard({ url }) {
           {type}
         </span>
         <div style={{ float: "right" }}>
-            <Icon name='arrow right'></Icon>
+          <Icon name="arrow right"></Icon>
           <Button
             size="small"
             circular
             color={type === "instagram" ? "google plus" : type}
             icon={type}
-            as={'a'}
+            as={"a"}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
           />
         </div>
-       </Card.Content>
+      </Card.Content>
       <Card.Content className="card-no-padding">
         <EmbedSocialCard type={type} url={url} />
       </Card.Content>

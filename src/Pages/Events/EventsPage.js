@@ -1,8 +1,10 @@
 import React from "react";
-import { Container, Card } from "semantic-ui-react";
+import { Container, Card, Grid, Divider } from "semantic-ui-react";
 import PageHeadings from "../Components/PageHeadings";
 import SocialCard from "./Components/SocialCard";
 import _ from "lodash";
+
+import "./EventsPage.css";
 
 const data = [
   "https://www.instagram.com/p/CDq5WKLn1E8/",
@@ -26,11 +28,15 @@ export default function EventsPage() {
             est laborum.`}
       />
 
-      <Card.Group stackable doubling itemsPerRow={3}>
-        {_.map(data, (url) => (
-          <SocialCard key={url} url={url} />
-        ))}
-      </Card.Group>
+      <Grid columns="three" stackable doubling>
+        <Grid.Row>
+          {_.map(data, (url) => (
+            <Grid.Column relaxed>
+              <SocialCard key={url} url={url} />
+            </Grid.Column>
+          ))}
+        </Grid.Row>
+      </Grid>
     </Container>
   );
 }
