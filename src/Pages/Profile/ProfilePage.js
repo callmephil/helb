@@ -13,7 +13,7 @@ function ProfileContributionAction() {
             Simple Contribution
           </Header>
           <p style={{ fontSize: "1em" }}>
-            You found something interesting you would like to share? Click the button below. best fit for media feed.
+            You found something interesting you would like to share? Click the button below. best fit for events and memorials.
           </p>
           <Button size="huge" color="blue">
             Contribute

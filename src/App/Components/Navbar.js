@@ -20,7 +20,7 @@ const leftItems = [
   { to: "/", name: "Home", exact: true },
   { to: "/institutions", name: "Institutions" },
   { to: "/fundings", name: "Fundings" },
-  { to: "/media", name: "Media Feed" },
+  { to: "/events", name: "Events" },
   { to: "/memorial", name: "Memorial" },
 ];
 

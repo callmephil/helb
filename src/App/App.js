@@ -8,8 +8,8 @@ import {
   ProfilePage,
   FundingPage,
   InstitutionsPage,
-  MediaPage,
   MemorialPage,
+  EventsPage,
 } from "../Pages";
 
 import "./App.css";
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" exact render={() => <HomePage />} />
           <Route path="/institutions" exact render={() => <InstitutionsPage />} />
           <Route path="/fundings" exact render={() => <FundingPage />} />
-          <Route path="/media" exact render={() => <MediaPage />} />
+          <Route path="/events" exact render={() => <EventsPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />
           <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />
           <Route path="/volunteers/renovation" exact render={() => <RenovationsPage />} />
