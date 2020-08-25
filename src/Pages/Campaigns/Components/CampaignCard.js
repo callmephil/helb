@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Icon } from "semantic-ui-react";
 
-export default function FundingCard({ url, title, by, date }) {
+export default function CampaignCard({ url, title, by, date }) {
     // const extractStringFromUrl = () => "";
   
     return (

@@ -6,7 +6,7 @@ import { Container } from "semantic-ui-react";
 import {
   HomePage,
   ProfilePage,
-  FundingPage,
+  CampaignsPage,
   InstitutionsPage,
   MemorialPage,
   EventsPage,
@@ -25,7 +25,7 @@ function App() {
         <Container className="main-container">
           <Route path="/" exact render={() => <HomePage />} />
           <Route path="/institutions" exact render={() => <InstitutionsPage />} />
-          <Route path="/fundings" exact render={() => <FundingPage />} />
+          <Route path="/campaigns" exact render={() => <CampaignsPage />} />
           <Route path="/events" exact render={() => <EventsPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />
           <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />

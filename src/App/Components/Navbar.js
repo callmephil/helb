@@ -19,7 +19,7 @@ import {
 const leftItems = [
   { to: "/", name: "Home", exact: true },
   { to: "/institutions", name: "Institutions" },
-  { to: "/fundings", name: "Fundings" },
+  { to: "/campaigns", name: "Campaigns" },
   { to: "/events", name: "Events" },
   { to: "/memorial", name: "Memorial" },
 ];

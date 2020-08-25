@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import FundingCard from "./Components/FundingCard";
 import { Card, Container, Progress } from "semantic-ui-react";
+import CampaignCard from "./Components/CampaignCard";
 import PageHeadings from "../Components/PageHeadings";
 
-export default function FundingPage() {
+export default function CampaignsPage() {
   const [percent, setPercent] = useState(0);
   const link = "support-your-lebanese-colleagues";
 
@@ -11,13 +11,14 @@ export default function FundingPage() {
     setPercent(32);
     return () => {
       // cleanup
-    }
-  }, [percent])
-
+    };
+  }, [percent]);
 
   return (
     <Container style={{ padding: "4em 0em" }}>
-      <PageHeadings title="Raise Funding" description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      <PageHeadings
+        title="Campaigns"
+        description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
@@ -33,15 +34,15 @@ export default function FundingPage() {
       </PageHeadings>
 
       <Card.Group stackable doubling itemsPerRow={3}>
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <FundingCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
       </Card.Group>
     </Container>
   );
