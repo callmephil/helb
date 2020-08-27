@@ -1,11 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Card, Container, Progress } from "semantic-ui-react";
-import CampaignCard from "./Components/CampaignCard";
+import CampaignCard, { CampaignCardTwo } from "./Components/CampaignCard";
 import PageHeadings from "../Components/PageHeadings";
+
+import useAxios from "axios-hooks";
+import CardSkeleton from "../Components/CardSkeleton";
+
+
+export function CardWrapper ({url}) {
+  const [{ data, loading, error }] = useAxios(
+    `https://helbpipeline.herokuapp.com/${url}`
+  )
+ 
+  if (loading) return <CardSkeleton />
+  if (error) return <p>Error!</p>
+
+  return (
+    <CampaignCardTwo url={url} {...data} />
+  );
+}
+
 
 export default function CampaignsPage() {
   const [percent, setPercent] = useState(0);
   const link = "support-your-lebanese-colleagues";
+  const link2 = "ilovebeirut";
 
   useEffect(() => {
     setPercent(32);
@@ -34,12 +53,8 @@ export default function CampaignsPage() {
       </PageHeadings>
 
       <Card.Group stackable doubling itemsPerRow={3}>
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CardWrapper url={link} />
+        <CardWrapper url={link2} />
         <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
         <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
         <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />

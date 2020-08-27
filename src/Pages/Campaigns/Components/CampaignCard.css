@@ -1,0 +1,20 @@
+.progress-bar-padding {
+    padding: 0.5em 1em;
+}
+
+.campaign-card-title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.campaign-description-boxSize {
+    height: 8rem;
+}
+
+/* Is this a hack ? */
+@media only screen and (max-width: 767px) {
+    .campaign-card-text-padding {
+        padding: 0 8px;
+    }
+}
