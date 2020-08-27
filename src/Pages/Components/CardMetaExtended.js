@@ -11,7 +11,7 @@ export function CardMetaStartEndDate({ start_date, end_date, textAlign = "left" 
         <Icon className="fal fa-hourglass-start" />
         {start_date} -
         <Icon className="fal fa-hourglass-end" />
-        {end_date ? end_date : "No known deadline"}
+        {end_date ? end_date : "Unknown deadline"}
       </span>
     </Card.Meta>
   );

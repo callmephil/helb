@@ -56,6 +56,11 @@ export function CampaignCardTwo({
   thumbnail,
   popularity,
 }) {
+  const redirectReducer = {
+    as:"a",
+    target:"_blank" ,
+    href: url
+  }
   return (
     <Card>
       <Card.Content className="no-grow">
@@ -63,10 +68,10 @@ export function CampaignCardTwo({
           <Image size="tiny" src="./assets/images/gofundme.png" wrapped />
         </Card.Header>
       </Card.Content>
-      <Image src={thumbnail} wrapped ui={false} />
+      <Image {...redirectReducer} src={thumbnail} wrapped ui={false} />
 
-      <Card.Content as={"a"} target="_blank" href={url}>
-        <Card.Header className="campaign-card-title campaign-card-text-padding">
+      <Card.Content>
+        <Card.Header {...redirectReducer} className="campaign-card-title campaign-card-text-padding">
           <span>{title}</span>
           <Icon className="fas fa-chevron-right" />
         </Card.Header>
@@ -74,7 +79,7 @@ export function CampaignCardTwo({
           <span className="date">{organizer}</span>
         </Card.Meta>
         <Card.Meta className="progress-bar-padding">
-          <Progress size="small" percent={progressValue} indicating content={progressText} />
+          <Progress precision={2} size="small" percent={progressValue} indicating content={progressText} />
         </Card.Meta>
         <Card.Description className="campaign-description-boxSize campaign-card-text-padding">
           <p>{description.substr(0, 200)}...</p>
@@ -91,6 +96,7 @@ export function CampaignCardTwo({
           content="Donate"
           icon="heart"
           label={{ basic: true, color: "red", pointing: "left", content: `${popularity}` }}
+          {...redirectReducer}
         />
       </Card.Content>
 
