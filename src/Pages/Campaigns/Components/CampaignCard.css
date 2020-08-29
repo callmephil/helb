@@ -9,7 +9,7 @@
 }
 
 .campaign-description-boxSize {
-    height: 8rem;
+    min-height: 8rem;
 }
 
 /* Is this a hack ? */
