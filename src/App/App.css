@@ -84,10 +84,6 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
   text-transform: capitalize;
 }
 
-.no-grow {
-  flex-grow: 0 !important;
-}
-
 .instagram-media.instagram-media-rendered {
   min-width: 0 !important;
 }
@@ -103,7 +99,7 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
 
 /* Bootstrap Start */
 .d-flex {
-  display: flex;
+  display: flex !important;
 }
 
 .flex-grow-1 {
@@ -114,12 +110,16 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
   flex-grow: 0 !important;
 }
 
-.align-center {
-  align-items: center
+.align-items-center {
+  align-items: center !important;
 }
 
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
+}
+
+.justify-space-between {
+  justify-content: space-between !important;
 }
 
 .no-border {

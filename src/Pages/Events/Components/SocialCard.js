@@ -104,7 +104,7 @@ export default function SocialCard({ url }) {
   const type = getTypeFromUrl(url);
   return (
     <Card fluid>
-      <Card.Content className="no-grow">
+      <Card.Content className="flex-no-grow">
         <Label color="black" ribbon icon="map marker alternate" content="location" />
         <span
           className="text-capitalize"

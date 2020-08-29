@@ -65,7 +65,7 @@ export function CampaignCardTwo({
 
   const CardHeader = () => {
     return (
-      <Card.Content className="no-grow">
+      <Card.Content className="flex-grow-0">
         <Card.Header textAlign="center">
           <Image size="tiny" src={`./assets/images/${type}.png`} wrapped />
         </Card.Header>
@@ -75,10 +75,10 @@ export function CampaignCardTwo({
 
   const CardTitle = () => {
     return (
-      <Card.Content>
+      <Card.Content className="flex-grow-0 campaign-title-height align-items-center justify-center">
         <Card.Header
           {...redirectReducer}
-          className="campaign-card-title campaign-card-text-padding">
+          className="d-flex align-items-center justify-space-between campaign-card-text-padding">
           <span>{title}</span>
           <Icon className="fas fa-chevron-right" />
         </Card.Header>
@@ -98,7 +98,7 @@ export function CampaignCardTwo({
           </Card.Description>
         </Card.Content>
 
-        <Card.Content className="no-border no-grow">
+        <Card.Content className="no-border flex-grow-0">
           <Card.Description className="campaign-card-text-padding">
             <CardMetaStartEndDate start_date={start_date} end_date={end_date} />
           </Card.Description>
@@ -109,7 +109,7 @@ export function CampaignCardTwo({
 
   const CardDonationButton = () => {
     return (
-      <Card.Content className="d-flex flex-grow-0 align-center justify-center">
+      <Card.Content className="d-flex flex-grow-0 align-items-center justify-center">
         <Button
           className="campagin-button-text-size"
           size="small"
@@ -136,7 +136,7 @@ export function CampaignCardTwo({
 
       <CardTitle />
 
-      <Card.Content className=" no-border  progress-bar-padding flex-grow-0 align-center justify-center ">
+      <Card.Content className="no-border progress-bar-padding flex-grow-0 align-items-center justify-center ">
         <Progress
           precision={2}
           size="small"

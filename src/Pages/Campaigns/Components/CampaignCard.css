@@ -1,11 +1,5 @@
 .progress-bar-padding {
-    padding: 0.5em 1em;
-}
-
-.campaign-card-title {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+    padding: 0.5rem 1em !important;
 }
 
 .campaign-description-boxSize {
@@ -19,17 +13,14 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .progress-bar-padding {
-        padding: 1rem 0;
-    }
-}
-
-
 .campaign-card-image-height > img {
     height: 220px !important;
 }
 
 .campagin-button-text-size > .label {
     font-size: 0.9em !important;
+}
+
+.campaign-title-height {
+    min-height: 8rem;
 }
