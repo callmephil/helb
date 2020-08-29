@@ -19,6 +19,17 @@
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .progress-bar-padding {
+        padding: 1rem 0;
+    }
+}
+
+
 .campaign-card-image-height > img {
     height: 220px !important;
+}
+
+.campagin-button-text-size > .label {
+    font-size: 0.9em !important;
 }

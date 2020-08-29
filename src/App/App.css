@@ -99,3 +99,30 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
 .card-no-padding iframe {
   border: none !important;
 }
+
+
+/* Bootstrap Start */
+.d-flex {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.align-center {
+  align-items: center
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.no-border {
+  border: none !important;
+}
+/* Bootstrap End */

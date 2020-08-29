@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Card, Icon, Button } from "semantic-ui-react";
 import { Image, Progress } from "semantic-ui-react";
 import {
@@ -62,15 +62,19 @@ export function CampaignCardTwo({
     target: "_blank",
     href: url,
   };
-  return (
-    <Card>
+
+  const CardHeader = () => {
+    return (
       <Card.Content className="no-grow">
         <Card.Header textAlign="center">
           <Image size="tiny" src={`./assets/images/${type}.png`} wrapped />
         </Card.Header>
       </Card.Content>
-      <Image {...redirectReducer} src={thumbnail} wrapped ui={false} className="campaign-card-image-height" />
+    );
+  };
 
+  const CardTitle = () => {
+    return (
       <Card.Content>
         <Card.Header
           {...redirectReducer}
@@ -81,25 +85,33 @@ export function CampaignCardTwo({
         <Card.Meta className="campaign-card-text-padding">
           <span className="date">{organizer}</span>
         </Card.Meta>
-        <Card.Meta className="progress-bar-padding">
-          <Progress
-            precision={2}
-            size="small"
-            percent={progressValue}
-            indicating
-            content={progressText}
-          />
-        </Card.Meta>
-        <Card.Description className="campaign-description-boxSize campaign-card-text-padding">
-          <p>{description.substr(0, 245)}...</p>
-        </Card.Description>
-        <Card.Description className="campaign-card-text-padding">
-          <CardMetaStartEndDate start_date={start_date} end_date={end_date} />
-        </Card.Description>
       </Card.Content>
+    );
+  };
 
-      <Card.Content>
+  const CardDescription = () => {
+    return (
+      <Fragment>
+        <Card.Content className="no-border">
+          <Card.Description className="campaign-description-boxSize campaign-card-text-padding">
+            <p>{description.substr(0, 245)}...</p>
+          </Card.Description>
+        </Card.Content>
+
+        <Card.Content className="no-border no-grow">
+          <Card.Description className="campaign-card-text-padding">
+            <CardMetaStartEndDate start_date={start_date} end_date={end_date} />
+          </Card.Description>
+        </Card.Content>
+      </Fragment>
+    );
+  };
+
+  const CardDonationButton = () => {
+    return (
+      <Card.Content className="d-flex flex-grow-0 align-center justify-center">
         <Button
+          className="campagin-button-text-size"
           size="small"
           color="red"
           content="Donate"
@@ -108,6 +120,35 @@ export function CampaignCardTwo({
           {...redirectReducer}
         />
       </Card.Content>
+    );
+  };
+
+  return (
+    <Card>
+      <CardHeader />
+      <Image
+        {...redirectReducer}
+        src={thumbnail}
+        wrapped
+        ui={false}
+        className="campaign-card-image-height"
+      />
+
+      <CardTitle />
+
+      <Card.Content className=" no-border  progress-bar-padding flex-grow-0 align-center justify-center ">
+        <Progress
+          precision={2}
+          size="small"
+          percent={progressValue}
+          indicating
+          content={progressText}
+        />
+      </Card.Content>
+
+      <CardDescription />
+
+      <CardDonationButton />
 
       <Card.Content extra>
         <CardMetaLabels labels={labels} />
