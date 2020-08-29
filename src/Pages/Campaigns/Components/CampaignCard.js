@@ -75,7 +75,7 @@ export function CampaignCardTwo({
 
   const CardTitle = () => {
     return (
-      <Card.Content className="flex-grow-0 campaign-title-height align-items-center justify-center">
+      <Card.Content className="flex-grow-0 align-items-center justify-center">
         <Card.Header
           {...redirectReducer}
           className="d-flex align-items-center justify-space-between campaign-card-text-padding">
