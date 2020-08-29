@@ -1,30 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Card, Container, Progress } from "semantic-ui-react";
-import CampaignCard, { CampaignCardTwo } from "./Components/CampaignCard";
+import { CampaignCardTwo } from "./Components/CampaignCard";
 import PageHeadings from "../Components/PageHeadings";
 
 import useAxios from "axios-hooks";
 import CardSkeleton from "../Components/CardSkeleton";
 
+export function CardWrapper({ type, url }) {
+  const [{ data, loading, error }] = useAxios(`https://helbpipeline.herokuapp.com/${type}/${url}`);
 
-export function CardWrapper ({url}) {
-  const [{ data, loading, error }] = useAxios(
-    `https://helbpipeline.herokuapp.com/${url}`
-  )
- 
-  if (loading) return <CardSkeleton />
-  if (error) return <p>Error!</p>
+  if (loading) return <CardSkeleton />;
+  if (error) return <p>Error!</p>;
 
-  return (
-    <CampaignCardTwo url={url} {...data} />
-  );
+  return <CampaignCardTwo type={type} url={url} {...data} />;
 }
-
 
 export default function CampaignsPage() {
   const [percent, setPercent] = useState(0);
-  const link = "support-your-lebanese-colleagues";
-  const link2 = "ilovebeirut";
 
   useEffect(() => {
     setPercent(32);
@@ -53,11 +45,12 @@ export default function CampaignsPage() {
       </PageHeadings>
 
       <Card.Group stackable doubling itemsPerRow={3}>
-        <CardWrapper url={link} />
-        <CardWrapper url={link2} />
+        <CardWrapper type="justgiving" url="lebanon-relief" />
+        <CardWrapper type="gofundme" url="support-your-lebanese-colleagues" />
+        <CardWrapper type="gofundme" url="ilovebeirut" />
+        {/* <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
         <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
+        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" /> */}
       </Card.Group>
     </Container>
   );

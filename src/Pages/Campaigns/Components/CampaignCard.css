@@ -18,3 +18,7 @@
         padding: 0 8px;
     }
 }
+
+.campaign-card-image-height > img {
+    height: 220px !important;
+}

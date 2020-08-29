@@ -45,6 +45,7 @@ export default function CampaignCard({ url, title, by, date }) {
 const labels = ["Fund Raising", "Gathering", "Outdoor"];
 
 export function CampaignCardTwo({
+  type,
   url,
   title,
   description,
@@ -57,21 +58,23 @@ export function CampaignCardTwo({
   popularity,
 }) {
   const redirectReducer = {
-    as:"a",
-    target:"_blank" ,
-    href: url
-  }
+    as: "a",
+    target: "_blank",
+    href: url,
+  };
   return (
     <Card>
       <Card.Content className="no-grow">
         <Card.Header textAlign="center">
-          <Image size="tiny" src="./assets/images/gofundme.png" wrapped />
+          <Image size="tiny" src={`./assets/images/${type}.png`} wrapped />
         </Card.Header>
       </Card.Content>
-      <Image {...redirectReducer} src={thumbnail} wrapped ui={false} />
+      <Image {...redirectReducer} src={thumbnail} wrapped ui={false} className="campaign-card-image-height" />
 
       <Card.Content>
-        <Card.Header {...redirectReducer} className="campaign-card-title campaign-card-text-padding">
+        <Card.Header
+          {...redirectReducer}
+          className="campaign-card-title campaign-card-text-padding">
           <span>{title}</span>
           <Icon className="fas fa-chevron-right" />
         </Card.Header>
@@ -79,10 +82,16 @@ export function CampaignCardTwo({
           <span className="date">{organizer}</span>
         </Card.Meta>
         <Card.Meta className="progress-bar-padding">
-          <Progress precision={2} size="small" percent={progressValue} indicating content={progressText} />
+          <Progress
+            precision={2}
+            size="small"
+            percent={progressValue}
+            indicating
+            content={progressText}
+          />
         </Card.Meta>
         <Card.Description className="campaign-description-boxSize campaign-card-text-padding">
-          <p>{description.substr(0, 200)}...</p>
+          <p>{description.substr(0, 245)}...</p>
         </Card.Description>
         <Card.Description className="campaign-card-text-padding">
           <CardMetaStartEndDate start_date={start_date} end_date={end_date} />
