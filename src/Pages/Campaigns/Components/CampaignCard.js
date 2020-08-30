@@ -152,7 +152,7 @@ export function CampaignCardTwo({
 
       <Card.Content extra>
         <CardMetaLabels labels={labels} />
-        <div className="card-institution-meta">
+        <div className="card-organization-meta">
           <CardMetaContributions by="Helb" date="Today" />
           <span>Share It!</span>
         </div>

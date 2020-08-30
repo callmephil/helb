@@ -24,7 +24,7 @@ function ProfileContributionAction() {
             Advanced Contribution
           </Header>
           <p style={{ fontSize: "1em" }}>
-            If you're an activist or an advanced user, you can contribute by adding Institutions and
+            If you're an activist or an advanced user, you can contribute by adding Organizations and
             much more...
           </p>
           <Button size="huge" color="black">

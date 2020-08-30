@@ -104,7 +104,7 @@ export default function VolunteerCard({
             <Label key={label} circular basic content={label} />
           ))}
         </Card.Meta>
-        <div className="card-institution-meta">
+        <div className="card-organization-meta">
           <span>
             <Icon name="share" />
             {by}

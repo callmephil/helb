@@ -7,7 +7,7 @@ import {
   HomePage,
   ProfilePage,
   CampaignsPage,
-  InstitutionsPage,
+  OrganizationsPage,
   MemorialPage,
   EventsPage,
 } from "../Pages";
@@ -24,7 +24,7 @@ function App() {
       <ResponsiveContainer>
         <Container className="main-container">
           <Route path="/" exact render={() => <HomePage />} />
-          <Route path="/institutions" exact render={() => <InstitutionsPage />} />
+          <Route path="/organizations" exact render={() => <OrganizationsPage />} />
           <Route path="/campaigns" exact render={() => <CampaignsPage />} />
           <Route path="/events" exact render={() => <EventsPage />} />
           <Route path="/memorial" exact render={() => <MemorialPage />} />

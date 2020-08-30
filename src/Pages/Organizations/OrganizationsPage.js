@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React from "react";
 import { Container, Card } from "semantic-ui-react";
-import InstitutionCard from "./Components/InstitutionCard";
+import OrganizationCard from "./Components/OrganizationCard";
 import { makeKeyOfObject } from "../../Utils/ComponentHelpers";
 import PageHeadings from "../Components/PageHeadings";
 
@@ -62,11 +62,11 @@ const staticCards = [
   },
 ];
 
-export default function InstitutionsPage() {
+export default function OrganizationsPage() {
   return (
     <Container style={{ padding: "4em 0em" }}>
       <PageHeadings
-        title="Institutions"
+        title="Organizations"
         description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -77,7 +77,7 @@ export default function InstitutionsPage() {
 
       <Card.Group stackable doubling itemsPerRow={3}>
         {_.map(staticCards, (card) => (
-          <InstitutionCard key={makeKeyOfObject(card)} cardContent={card} />
+          <OrganizationCard key={makeKeyOfObject(card)} cardContent={card} />
         ))}
       </Card.Group>
     </Container>

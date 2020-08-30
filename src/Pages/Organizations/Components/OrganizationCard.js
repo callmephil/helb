@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { makeKeyOfObject } from "../../../Utils/ComponentHelpers";
 import { Card, Image, Icon, Button, Label } from "semantic-ui-react";
 
-export default function InstitutionCard({ cardContent }) {
+export default function OrganizationCard({ cardContent }) {
   const { image, name, description, website, location, extra, labels, meta } = cardContent;
 
   const CardMeta = ({ labels, by, date, cardId }) => {
@@ -14,7 +14,7 @@ export default function InstitutionCard({ cardContent }) {
             <Label key={label} circular basic content={label} />
           ))}
         </Card.Meta>
-        <div className="card-institution-meta">
+        <div className="card-organization-meta">
           <span>
             <Icon name="share" />
             {by}
