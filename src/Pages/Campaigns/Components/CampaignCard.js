@@ -42,9 +42,8 @@ export default function CampaignCard({ url, title, by, date }) {
   );
 }
 
-const labels = ["Fund Raising", "Gathering", "Outdoor"];
-
 export function CampaignCardTwo({
+  labels,
   type,
   url,
   title,
@@ -56,6 +55,7 @@ export function CampaignCardTwo({
   progressValue,
   thumbnail,
   popularity,
+  status
 }) {
   const redirectReducer = {
     as: "a",
@@ -107,20 +107,38 @@ export function CampaignCardTwo({
     );
   };
 
-  const CardDonationButton = () => {
-    return (
-      <Card.Content className="d-flex flex-grow-0 align-items-center justify-center">
-        <Button
-          className="campagin-button-text-size"
-          size="small"
-          color="red"
-          content="Donate"
-          icon="heart"
-          label={{ basic: true, color: "red", pointing: "left", content: `${popularity}` }}
-          {...redirectReducer}
-        />
-      </Card.Content>
-    );
+  const CardDonationButton = ({status}) => {
+    switch(status) {
+      // case "Active":
+      case "Closed":
+        return (
+          <Card.Content className="d-flex flex-grow-0 align-items-center justify-center">
+            <Button
+              className="campagin-button-text-size"
+              size="small"
+              color="green"
+              icon="heart"
+              content="Goal Achieved"
+              label={{ basic: true, color: "green", pointing: "left", content: `Your Awesome !` }}
+              {...redirectReducer}
+            />
+          </Card.Content>
+        );
+      default:
+        return (
+          <Card.Content className="d-flex flex-grow-0 align-items-center justify-center">
+            <Button
+              className="campagin-button-text-size"
+              size="small"
+              color="red"
+              content="Donate"
+              icon="heart"
+              label={{ basic: true, color: "red", pointing: "left", content: `${popularity}` }}
+              {...redirectReducer}
+            />
+          </Card.Content>
+        );
+    }
   };
 
   return (
@@ -148,7 +166,7 @@ export function CampaignCardTwo({
 
       <CardDescription />
 
-      <CardDonationButton />
+      <CardDonationButton status={status} />
 
       <Card.Content extra>
         <CardMetaLabels labels={labels} />

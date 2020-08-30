@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Card, Container, Progress } from "semantic-ui-react";
 import { CampaignCardTwo } from "./Components/CampaignCard";
 import PageHeadings from "../Components/PageHeadings";
 
 import useAxios from "axios-hooks";
 import CardSkeleton from "../Components/CardSkeleton";
+import _ from "lodash";
+import { getTypeFromUrl } from "../../Utils/Script";
 
-export function CardWrapper({ type, url }) {
-  const [{ data, loading, error }] = useAxios(`https://helbpipeline.herokuapp.com/${type}/${url}`);
+export function CardWrapper({ type, url, labels }) {
+  const [{ data, loading, error }] = useAxios(`https://helbpipeline.herokuapp.com/${type}/${encodeURIComponent(url)}`);
 
   if (loading) return <CardSkeleton />;
-  if (error) return <p>Error!</p>;
+  if (error) return <Fragment />; 
 
-  return <CampaignCardTwo type={type} url={url} {...data} />;
+  if (data === null) return <Fragment />; 
+
+  return <CampaignCardTwo type={type} url={url} labels={labels} {...data} />;
 }
 
 export default function CampaignsPage() {
-  const [percent, setPercent] = useState(0);
+  const [{ data, loading }] = useAxios(`./assets/static/campaigns.json`);
 
-  useEffect(() => {
-    setPercent(32);
-    return () => {
-      // cleanup
-    };
-  }, [percent]);
+  if (loading) return <p>Loading</p>;
+
+  // const [percent, setPercent] = useState(0);
+
+  // useEffect(() => {
+  //   setPercent(32);
+  //   return () => {
+  //     // cleanup
+  //   };
+  // }, [percent]);
 
   return (
     <Container style={{ padding: "4em 0em" }}>
@@ -35,22 +43,20 @@ export default function CampaignsPage() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum.`}>
-        <Progress
+        {/* <Progress
           progress="value"
           value={percent}
           total={100}
           indicating
           content="*Total estimated amount in Million $ raised to date."
-        />
+        /> */}
       </PageHeadings>
 
       <Card.Group stackable doubling itemsPerRow={3}>
-        <CardWrapper type="justgiving" url="lebanon-relief" />
-        <CardWrapper type="gofundme" url="support-your-lebanese-colleagues" />
-        <CardWrapper type="gofundme" url="ilovebeirut" />
-        {/* <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" />
-        <CampaignCard url={link} title="GoFundMe" by="Helb" date="20/08/2020" /> */}
+        {_.map(data, ({ location, link, labels }) => {
+          const type = getTypeFromUrl(link);
+          return <CardWrapper key={link} type={type} url={link} labels={labels} />;
+        })}
       </Card.Group>
     </Container>
   );
