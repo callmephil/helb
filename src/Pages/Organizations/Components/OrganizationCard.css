@@ -6,8 +6,19 @@
     background-color: #EF4135 !important;
 }
 
+.image-bg-white {
+    background-color: white !important;
+}
+
+.image-bg-black {
+    background-color: black !important;
+}
+
 .image-padding {
-    padding: 2em !important;
+    padding: 2.5rem !important;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
 }
 
 .centered.image.image-padding img {

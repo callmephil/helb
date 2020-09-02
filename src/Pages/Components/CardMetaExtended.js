@@ -21,7 +21,7 @@ export function CardMetaLabels({labels}) {
   return (
     <Card.Meta>
       {_.map(labels, (label) => (
-        <Label key={label} circular basic content={label} />
+        label && <Label key={label} circular basic content={label} />
       ))}
     </Card.Meta>
   );
@@ -42,12 +42,42 @@ export function CardMetaContributions({ by, date }) {
   );
 }
 
-export function CardMetaSocials({ social }) {
+export function CardExtraLinks({ type, src }) {
+  const obj = {
+    text: "Unknown",
+    icon: "stop circle outline",
+  };
+  switch (type) {
+    case 0:
+      obj.text = "Donate";
+      obj.icon = "money bill alternate outline";
+      break;
+    case 1:
+      obj.text = "Contact";
+      obj.icon = "address card outline";
+      break;
+    default:
+      return <Fragment></Fragment>;
+  }
+
+  return (
+    <Card.Content extra>
+      <a href={src} target="_blank" rel="noopener noreferrer">
+        {/* @ts-ignore */}
+        <Icon name={obj.icon} />
+        {obj.text}
+      </a>
+    </Card.Content>
+  );
+};
+
+export function CardMetaSocials({ social, size = "mini" }) {
   return (
     <Fragment>
       {_.map(social, ({ type, src }) => {
         const color = type === "instagram" ? "google plus" : type;
-        return <Button as={"a"} size="small" circular color={color} icon={type} href={src} />;
+        /* @ts-ignore */
+        return <Button key={src} as={"a"} size={size} circular color={color} icon={type} target="_blank" href={src} />;
       })}
     </Fragment>
   );

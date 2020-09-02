@@ -1,0 +1,531 @@
+[
+  {
+    "image": {
+      "src": "https://offrejoie.org/wp-content/uploads/2020/08/offrejoie-logo.png",
+      "backgroundColor": "blue"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://offrejoie.org/donate/"
+      },
+      {
+        "type": 1,
+        "src": "https://offrejoie.org/contact-us/"
+      }
+    ],
+    "name": "Offre Joie",
+    "location": "Lebanon",
+    "website": "https://offrejoie.org/",
+    "description": "Offrejoie was born in the midst of a raging civil war in Lebanon in 1985. A group of young Red Cross volunteers worked together to help the injured. Alleviating human suffering transcended any differences between them.",
+    "labels": [
+      "Housing",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/offre.joie/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/offrejoieliban"
+      },
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/offrejoie/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 0
+    }
+  },
+  {
+    "image": {
+      "src": "https://www.caritas.org/wordpress/wp-content/uploads/2017/04/logo_large-1.png",
+      "backgroundColor": "red"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "http://www.caritas.org.lb/get_involved/donate"
+      },
+      {
+        "type": 1,
+        "src": "http://www.caritas.org.lb/contact_us"
+      }
+    ],
+    "name": "Caritas",
+    "location": "Lebanon",
+    "website": "http://www.caritas.org.lb",
+    "description": "Caritas Internationalis reflects the social mission and core values of the Catholic Church. We believe in dignity, solidarity and stewardship on behalf of the world’s most vulnerable people.",        
+    "labels": [
+      "Food",
+      "Housing",
+      "Health",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/CaritasLebanon"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/caritas_lebanon/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/Caritaslb"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 1
+    }
+  },
+  {
+    "image": {
+      "src": "./assets/images/organizations/lebanese-red-cross.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://supportlrc.app/?redirect=1&PID=158"
+      },
+      {
+        "type": 1,
+        "src": "http://www.redcross.org.lb/SubPage.aspx?pageid=273"
+      }
+    ],
+    "name": "Lebanese Red Cross",
+    "location": "Lebanon",
+    "website": "http://www.redcross.org.lb",
+    "description": "The Lebanese Red Cross (LRC) is a national society that was established on July 9, 1945 as an independent National Society. In 1946, it was recognized by the State as a public nonprofit organization and as an auxiliary team to the medical personnel of the Lebanese Army. The goal of the Lebanese Red Cross is to promote peace, serve the society, and alleviate human suffering with neutrality and without any racial, sexual, social, religious or political discrimination.",
+    "labels": [
+      "Health",
+      "Housing",
+      "Volunteers",
+      " First Aid"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/LebaneseRedCross"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/redcrosslebanon/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 2
+    }
+  },
+  {
+    "image": {
+      "src": "https://preemptivelove.org/wp-content/themes/plc/dist/images/logo.svg",
+      "backgroundColor": "GRAY"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://preemptivelove.org/donate"
+      },
+      {
+        "type": 1,
+        "src": "https://preemptivelove.org/contact/"
+      }
+    ],
+    "name": "Preemtive Love",
+    "location": "Lebanon",
+    "website": "https://preemptivelove.org",
+    "description": "We exist to end war. To heal all that is tearing us apart. We help fast with help that lasts on the frontlines of war, violence, and division. We heal the past, reaching across enemy lines to build relationships and learn from each other.\nWe’re a coalition of peacemakers stretching across Iraq, Syria, the United States, and beyond, working together to unmake violence. We are first in w… See More",
+    "labels": [
+      "Food",
+      "Housing",
+      "Volunteers",
+      "Employment"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/preemptivelove"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/preemptivelove/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/preemptivelove"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 3
+    }
+  },
+  {
+    "image": {
+      "src": "./assets/images/organizations/arcenciel.svg",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.arcenciel.org/donate/"
+      },
+      {
+        "type": 1,
+        "src": "https://www.arcenciel.org/contact-us/"
+      }
+    ],
+    "name": "Arc en Ciel",
+    "location": "Lebanon",
+    "website": "https://www.arcenciel.org",
+    "description": "arcenciel is a Lebanese based non-profit organization established in 1985 during the Lebanese civil war. It was recognized as a public interest NGO in 1995 by Presidential Decree N7541. With five core programs, being implemented at 12 centers across Lebanon, arcenciel’s main goal is to work with every person in need. arcenciel aims to vigorously advance national policies in all the sectors in which it is active, while keeping a non-confessional and apolitical stance.",
+    "labels": [
+      "Food",
+      "Housing",
+      "Volunteers",
+      "Empowerment"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/arcenciel.org/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/arcenciel.aec/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 4
+    }
+  },
+  {
+    "image": {
+      "src": "./assets/images/organizations/beit-el-baraka.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://beitelbaraka.net/welcome/"
+      }
+    ],
+    "name": "Beit el Baraka",
+    "location": "Lebanon",
+    "website": "https://www.beitelbaraka.org",
+    "description": "Our Mission is to ensure a sense of dignity to hard-working citizens once they retire, by assisting them in their struggle with the increasing cost of living. In a spirit of respect and support, we aim to provide a tailor-made accurate and beneficial response to Lebanon’s economic and multi-dimensional challenges that are depriving many retired citizens of their most basic needs and rights.",
+    "labels": [
+      "Food",
+      "Housing",
+      "Health",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/beitelbaraka.org/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/beitelbaraka/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 5
+    }
+  },
+  {
+    "image": {
+      "src": "https://static.tildacdn.com/tild3731-6538-4062-b639-636361343764/LiveLove_Black_logo.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://livelove.org/donate"
+      },
+      {
+        "type": 1,
+        "src": "https://www.livelovebeirut.com/pages/contact"
+      }
+    ],
+    "name": "Live Love Beirut/ Rebuild Beirut",
+    "location": "Lebanon",
+    "website": "https://livelove.org/",
+    "description": "We build communities to create hope and positive impact for Nature, Society and Culture in cities around the world. We believe in You(th) and think positive storytelling can change the world, and create engaged citizens who are in love with their planet, and want to create shared solutions to shared problems.",
+    "labels": [
+      "Housing",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/LiveLoveBeirut/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/livelovebeirut/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/livelovebeirut"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 6
+    }
+  },
+  {
+    "image": {
+      "src": "https://lebanesefoodbank.org/uc/logo.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://donate.lebanesefoodbank.org/"
+      }
+    ],
+    "name": "Lebanese Food Bank",
+    "location": "Lebanon",
+    "website": "https://lebanesefoodbank.org",
+    "description": "Our mission is to fight and overcome hunger by developing effective Feeding Programs to eliminate hunger. A non-profit organization (# 1596) established by a group of Lebanese businessmen to eliminate hunger in all Lebanon by establishing partnerships and cooperation with all those who are concerned.",
+    "labels": [
+      "Food",
+      ""
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/Lebfoodbank/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/lebfoodbank"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/lebfoodbank"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 7
+    }
+  },
+  {
+    "image": {
+      "src": "https://embracelebanon.org/wp-content/uploads/2019/03/logo-1.png",
+      "backgroundColor": "black"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://embracelebanon.org/donate-to-embrace/"
+      },
+      {
+        "type": 1,
+        "src": "https://embracelebanon.org/become-a-volunteer/"
+      }
+    ],
+    "name": "Embrace Lebanon",
+    "location": "Lebanon",
+    "website": "https://embracelebanon.org/",
+    "description": "Embrace branched out as an independent Lebanese non-governmental organisation (NGO), not affiliated with any institution. Embrace seeks to better inform the community about mental illness, break the stigma, provide support to those affected, and help foster a resilient and emotionally healthy community which cares for the mental wellbeing of its young and old.",
+    "labels": [
+      "Health",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/embracelebanon"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/embrace_lebanon/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/Embrace_lebanon"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 8
+    }
+  },
+  {
+    "image": {
+      "src": "./assets/images/organizations/bedayati.png",
+      "backgroundColor": "white"
+    },
+    "extra": [],
+    "name": "Bedayati",
+    "location": "Lebanon",
+    "website": "http://www.bedayati.org/",
+    "description": "Bedayati is a new social sector organization that works to empower marginalized youth to access decent and sustainable employment, responding to their aspirations for change. We envision an inclusive world of work where diversity is valued and where everyone has the opportunity to participate and make a change.",
+    "labels": [
+      "Employment",
+      ""
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/bedayatilebanon/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/bedayatilebanon/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/bedayatilebanon/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 9
+    }
+  },
+  {
+    "image": {
+      "src": "https://scontent.fbey14-1.fna.fbcdn.net/v/t31.0-8/13580456_1573939459566642_7672591454706221019_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=HR8j79bKxjMAX-jRmEo&_nc_oc=AQlUTjNZ8CweHR6mYBcFT1QsiP4_Nc9c89qPYT8nPLmJ5jH1kkYUNCgFhhc-Ank2d94&_nc_ht=scontent.fbey14-1.fna&oh=04c6040ccb969189ec9773d43071d042&oe=5F74A236",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.tahaddilebanon.org/donate.php"
+      },
+      {
+        "type": 1,
+        "src": "https://www.tahaddilebanon.org/contact.php"
+      }
+    ],
+    "name": "Tahaddi",
+    "location": "Lebanon",
+    "website": "https://www.tahaddilebanon.org/",
+    "description": "Tahaddi Lebanon is a registered non-profit organization that seeks to respond to the challenges of extreme poverty by facilitating access to education, health and social services.",
+    "labels": [
+      "Education",
+      "Culture",
+      "Health"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/tahaddilebanon"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 10
+    }
+  },
+  {
+    "image": {
+      "src": "https://openhouseslebanon.online/img/logo.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://openhouseslebanon.online/donation"
+      },
+      {
+        "type": 1,
+        "src": "https://openhouseslebanon.online/contactus"
+      }
+    ],
+    "name": "Open House Lebanon",
+    "location": "Lebanon",
+    "website": "https://openhouseslebanon.online/",
+    "description": "Providing houses 🏠 for people in need in lebanon during the explosion.",
+    "labels": [
+      "Housing",
+      ""
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/pages/category/Product-Service/Open-houses-Lebanon-578108959549475/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/open_houses_lebanon"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 11
+    }
+  },
+  {
+    "image": {
+      "src": "https://logopond.com/logos/66895d93de21c76720c2d25841d36fbd.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.givingloop.org/dsc#contribute"
+      },
+      {
+        "type": 1,
+        "src": "https://dsclebanon.org/get-involved"
+      }
+    ],
+    "name": "Donner Sang Compter",
+    "location": "Lebanon",
+    "website": "https://dsclebanon.org/",
+    "description": "DSC is a non-governmental, non-profit organization founded on the principles of empathy, compassion, humility, and sacrifice. We are not politically aligned. We are not religiously affiliated. Our only commitment is to humanity. DSC links patients in need of blood donations and those who are willing to donate.",
+    "labels": [
+      "Health",
+      ""
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/DSClebanon/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/dsclebanon/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/dsclebanon"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 12
+    }
+  }
+]
