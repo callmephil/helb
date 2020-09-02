@@ -1,11 +1,41 @@
-import React from "react";
-import { Card, Image, } from "semantic-ui-react";
+import React, { Fragment } from "react";
+import { Card, Image, Icon } from "semantic-ui-react";
 
 import "./OrganizationCard.css"
-import { CardMetaLabels, CardMetaContributions, CardMetaSocials, CardExtraLinks } from "../../Components/CardMetaExtended";
+import { CardMetaLabels, CardMetaContributions, CardMetaSocials } from "../../Components/CardMetaExtended";
+import _ from "lodash";
+
+function CardExtraLinks({ type, src }) {
+  const obj = {
+    text: "Unknown",
+    icon: "stop circle outline",
+  };
+  switch (type) {
+    case 0:
+      obj.text = "Donate";
+      obj.icon = "money bill alternate outline";
+      break;
+    case 1:
+      obj.text = "Contact";
+      obj.icon = "address card outline";
+      break;
+    default:
+      return <Fragment />;
+  }
+
+  return (
+    <Card.Content extra>
+      <a href={src} target="_blank" rel="noopener noreferrer">
+        {/* @ts-ignore */}
+        <Icon name={obj.icon} />
+        {obj.text}
+      </a>
+    </Card.Content>
+  );
+};
 
 export default function OrganizationCard({ cardContent }) {
-  const { image, name, description, website, location, extra, labels, meta, socials } = cardContent;
+  const { image, extra, name, description, website, location, labels, meta, socials } = cardContent;
   return (
     <Card>
       <Image
@@ -30,7 +60,9 @@ export default function OrganizationCard({ cardContent }) {
         <Card.Description content={description} />
       </Card.Content>
 
-      <CardExtraLinks {...extra}/>
+      {_.map(extra, (redirect) => 
+        <CardExtraLinks key={redirect.src} {...redirect}/>
+      )}
 
       <Card.Content extra>
         <CardMetaLabels labels={labels} />
