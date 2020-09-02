@@ -14,3 +14,16 @@ export const isMobile = () => {
 };
 
 export const isMobileOrTablet = () => !isDesktop(); 
+
+export const getSocialTypeFromUrl = (url) => {
+  let _type = "unknown";
+  if (typeof url === "string" && url !== "") {
+    const types = ["twitter", "facebook", "instagram"];
+    for (const type of types) {
+      if (url.includes(type)) {
+        _type = type;
+      }
+    }
+  }
+  return _type;
+};

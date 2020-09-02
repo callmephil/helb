@@ -1,65 +1,22 @@
 import React, { Fragment } from "react";
-import _ from "lodash";
 import { Tweet } from "react-twitter-widgets";
 import InstagramEmbed from "react-instagram-embed";
 import { FacebookProvider, EmbeddedPost } from "react-facebook";
-import { Card, Icon, Label, Button } from "semantic-ui-react";
+import { Card, Label } from "semantic-ui-react";
+import {
+  CardMetaLabels,
+  CardMetaContributions,
+  CardMetaSocial,
+} from "../../Components/CardMetaExtended";
+import { getSocialTypeFromUrl } from "../../../Utils/ComponentHelpers";
 
 const { REACT_APP_FB_ID } = process.env;
-
-const CardMeta = ({ labels, by, date, cardId, type, url }) => {
-  return (
-    <Card.Content extra>
-      <Card.Meta>
-        {_.map(labels, (label) => (
-          <Label key={label} circular basic content={label} />
-        ))}
-      </Card.Meta>
-      <div className="card-organization-meta">
-        <span>
-          <Icon name="share" />
-          {by}
-        </span>
-        <span>
-          <Icon name="calendar outline" />
-          {date}
-        </span>
-        <div>
-          <Icon name="arrow right" />
-          <Button
-            size="mini"
-            circular
-            color={type === "instagram" ? "google plus" : type}
-            icon={type}
-            as={"a"}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
-        </div>
-      </div>
-    </Card.Content>
-  );
-};
 
 const extractTwitterIdFromUrl = (url) => {
   if (typeof url !== "string" || url === "") {
     return;
   }
   return url.substr(url.lastIndexOf("s/") + 2, url.length);
-};
-
-const getTypeFromUrl = (url) => {
-  let _type = "unknown";
-  if (typeof url === "string" && url !== "") {
-    const types = ["twitter", "facebook", "instagram"];
-    for (const type of types) {
-      if (url.includes(type)) {
-        _type = type;
-      } else continue;
-    }
-  }
-  return _type;
 };
 
 function EmbedSocialCard({ type, url }) {
@@ -101,7 +58,7 @@ const meta = {
 const labels = ["Fund Raising", "Gathering", "Outdoor"];
 
 export default function SocialCard({ url }) {
-  const type = getTypeFromUrl(url);
+  const type = getSocialTypeFromUrl(url);
   return (
     <Card fluid>
       <Card.Content className="flex-no-grow">
@@ -116,7 +73,13 @@ export default function SocialCard({ url }) {
         <EmbedSocialCard type={type} url={url} />
       </Card.Content>
 
-      <CardMeta labels={labels} {...meta} type={type} url={url} />
+      <Card.Content extra>
+        <CardMetaLabels labels={labels} />
+        <div className="card-organization-meta">
+          <CardMetaContributions {...meta} />
+          <CardMetaSocial type={type} url={url} />
+        </div>
+      </Card.Content>
     </Card>
   );
 }

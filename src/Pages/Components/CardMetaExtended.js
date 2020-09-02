@@ -17,12 +17,10 @@ export function CardMetaStartEndDate({ start_date, end_date, textAlign = "left" 
   );
 }
 
-export function CardMetaLabels({labels}) {
+export function CardMetaLabels({ labels }) {
   return (
     <Card.Meta>
-      {_.map(labels, (label) => (
-        label && <Label key={label} circular basic content={label} />
-      ))}
+      {_.map(labels, (label) => label && <Label key={label} circular basic content={label} />)}
     </Card.Meta>
   );
 }
@@ -38,7 +36,7 @@ export function CardMetaContributions({ by, date }) {
         <Icon name="calendar outline" />
         {date}
       </span>
-      </Fragment>
+    </Fragment>
   );
 }
 
@@ -47,10 +45,37 @@ export function CardMetaSocials({ social, size = "mini" }) {
     <Fragment>
       {_.map(social, ({ type, src }) => {
         const color = type === "instagram" ? "google plus" : type;
-        /* @ts-ignore */
-        return <Button key={src} as={"a"} size={size} circular color={color} icon={type} target="_blank" href={src} />;
+        return (
+          <Button
+            key={src}
+            as={"a"}
+            // @ts-ignore
+            size={size}
+            circular
+            color={color}
+            icon={type}
+            target="_blank"
+            href={src}
+          />
+        );
       })}
     </Fragment>
+  );
+}
+
+export function CardMetaSocial({ type, url, size = "small" }) {
+  return (
+    <Button
+      // @ts-ignore
+      size={size}
+      circular
+      color={type === "instagram" ? "google plus" : type}
+      icon={type}
+      as={"a"}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    />
   );
 }
 

@@ -5,6 +5,7 @@ import _ from "lodash";
 import { List } from "semantic-ui-react";
 
 import { Modal } from "semantic-ui-react";
+import { CardMetaSocials, CardMetaLabels, CardMetaContributions } from "../../Components/CardMetaExtended";
 
 // const medicalType = ["Medical Assistance", "Mental Health", "Physiotherapy"];
 
@@ -68,34 +69,6 @@ export default function VolunteerCard({
   social,
   meta,
 }) {
-  const CardMeta = ({ social, labels, by, date, cardId }) => {
-    return (
-      <Card.Content extra>
-        <Card.Meta>
-          {_.map(labels, (label) => (
-            <Label key={label} circular basic content={label} />
-          ))}
-        </Card.Meta>
-        <div className="card-organization-meta">
-          <span>
-            <Icon name="share" />
-            {by}
-          </span>
-          <span>
-            <Icon name="calendar outline" />
-            {date}
-          </span>
-          <div>
-            {_.map(social, ({ type, src }) => {
-              const color = type === "instagram" ? "google plus" : type;
-              return <Button key={src} as={"a"} size="small" circular color={color} icon={type} href={src} />;
-            })}
-          </div>
-        </div>
-      </Card.Content>
-    );
-  };
-
   return (
     <Card>
       <Card.Content>
@@ -128,7 +101,14 @@ export default function VolunteerCard({
           contact={contact}
         />
       </Card.Content>
-      <CardMeta social={social} labels={labels} {...meta} />
+
+      <Card.Content extra>
+        <CardMetaLabels labels={labels} />
+        <div className="card-organization-meta">
+          <CardMetaContributions {...meta} />
+          <CardMetaSocials social={social} />
+        </div>
+      </Card.Content>
     </Card>
   );
 }
