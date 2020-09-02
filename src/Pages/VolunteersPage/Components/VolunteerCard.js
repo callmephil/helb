@@ -10,34 +10,6 @@ import { Modal } from "semantic-ui-react";
 
 // const statusType = ["Available"];
 
-// const _struct = {
-//   type: "",
-//   status: "",
-//   location: "",
-//   contact: {
-//     name: "",
-//     phones: [""],
-//   },
-//   serviceType: "",
-//   social: [
-//     {
-//       type: "facebook",
-//       src: "",
-//     },
-//     {
-//       type: "instagram",
-//       src: "",
-//     },
-//   ],
-//   description: ``,
-//   labels: ["", ""],
-//   meta: {
-//     by: "Helb",
-//     date: "20/08/20",
-//     cardId: 1,
-//   },
-// };
-
 function ContactModal({ trigger, contact }) {
   const { name, phones } = contact;
   const [open, setOpen] = React.useState(false);
@@ -54,9 +26,9 @@ function ContactModal({ trigger, contact }) {
         {name}
       </Modal.Header>
       <Modal.Content>
-        <List divided relaxed>
+        <List divided relaxed={true}>
           {_.map(phones, (phone) => (
-            <List.Item>
+            <List.Item key={phone}>
               <List.Icon name="phone" size="large" verticalAlign="middle" />
               <List.Content>
                 <List.Header as="a" href={`tel:${phone}`}>
@@ -116,7 +88,7 @@ export default function VolunteerCard({
           <div>
             {_.map(social, ({ type, src }) => {
               const color = type === "instagram" ? "google plus" : type;
-              return <Button as={"a"} size="small" circular color={color} icon={type} href={src} />;
+              return <Button key={src} as={"a"} size="small" circular color={color} icon={type} href={src} />;
             })}
           </div>
         </div>

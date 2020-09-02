@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import ResponsiveContainer from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { Container } from "semantic-ui-react";
@@ -23,15 +23,17 @@ function App() {
     <Fragment>
       <ResponsiveContainer>
         <Container className="main-container">
-          <Route path="/" exact render={() => <HomePage />} />
-          <Route path="/organizations" exact render={() => <OrganizationsPage />} />
-          <Route path="/campaigns" exact render={() => <CampaignsPage />} />
-          <Route path="/events" exact render={() => <EventsPage />} />
-          <Route path="/memorial" exact render={() => <MemorialPage />} />
-          <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />
-          <Route path="/volunteers/renovation" exact render={() => <RenovationsPage />} />
-          <Route path="/volunteers/housing" exact render={() => <HousingPage />} />
-          <Route path="/profile" exact render={() => <ProfilePage />} />
+          <Switch>
+            <Route path="/" exact render={() => <HomePage />} />
+            <Route path="/organizations" exact render={() => <OrganizationsPage />} />
+            <Route path="/campaigns" exact render={() => <CampaignsPage />} />
+            <Route path="/events" exact render={() => <EventsPage />} />
+            <Route path="/memorial" exact render={() => <MemorialPage />} />
+            <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />
+            <Route path="/volunteers/renovation" exact render={() => <RenovationsPage />} />
+            <Route path="/volunteers/housing" exact render={() => <HousingPage />} />
+            <Route path="/profile" exact render={() => <ProfilePage />} />
+          </Switch>
         </Container>
       </ResponsiveContainer>
       <Footer />

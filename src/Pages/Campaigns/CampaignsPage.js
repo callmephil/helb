@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { Card, Container, Progress } from "semantic-ui-react";
+import React, { Fragment } from "react";
+import { Card, Container } from "semantic-ui-react";
 import { CampaignCardTwo } from "./Components/CampaignCard";
 import PageHeadings from "../Components/PageHeadings";
 
@@ -24,15 +24,6 @@ export default function CampaignsPage() {
 
   if (loading) return <p>Loading</p>;
 
-  // const [percent, setPercent] = useState(0);
-
-  // useEffect(() => {
-  //   setPercent(32);
-  //   return () => {
-  //     // cleanup
-  //   };
-  // }, [percent]);
-
   return (
     <Container style={{ padding: "4em 0em" }}>
       <PageHeadings
@@ -43,13 +34,6 @@ export default function CampaignsPage() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum.`}>
-        {/* <Progress
-          progress="value"
-          value={percent}
-          total={100}
-          indicating
-          content="*Total estimated amount in Million $ raised to date."
-        /> */}
       </PageHeadings>
 
       <Card.Group stackable doubling itemsPerRow={3}>

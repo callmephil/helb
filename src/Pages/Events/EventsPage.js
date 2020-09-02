@@ -30,8 +30,8 @@ export default function EventsPage() {
 
       <Grid columns="three" stackable doubling>
         <Grid.Row>
-          {_.map(data, (url) => (
-            <Grid.Column relaxed>
+          {_.map(data, (url, index) => (
+            <Grid.Column key={`${url}-${index}`} relaxed="true">
               <SocialCard key={url} url={url} />
             </Grid.Column>
           ))}
