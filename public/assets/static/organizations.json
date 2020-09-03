@@ -412,7 +412,7 @@
   },
   {
     "image": {
-      "src": "https://scontent.fbey14-1.fna.fbcdn.net/v/t31.0-8/13580456_1573939459566642_7672591454706221019_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=HR8j79bKxjMAX-jRmEo&_nc_oc=AQlUTjNZ8CweHR6mYBcFT1QsiP4_Nc9c89qPYT8nPLmJ5jH1kkYUNCgFhhc-Ank2d94&_nc_ht=scontent.fbey14-1.fna&oh=04c6040ccb969189ec9773d43071d042&oe=5F74A236",
+      "src": "./assets/images/organizations/tahaddi.svg",
       "backgroundColor": "white"
     },
     "extra": [
@@ -526,6 +526,255 @@
       "by": "Helb",
       "date": "02/09/20",
       "cardId": 12
+    }
+  },
+  {
+    "image": {
+      "src": "https://d3n8a8pro7vhmx.cloudfront.net/nationalbloc/sites/3/meta_images/original/Logo_National_Bloc_2.svg?1553883206",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 1,
+        "src": "https://en.nationalbloc.org/contact"
+      }
+    ],
+    "name": "Bloc National",
+    "location": "Lebanon",
+    "website": "https://en.nationalbloc.org/",
+    "description": "Our goal is a prosperous, green and fair Lebanon, and to achieve it we must together eliminate the five wounds and express the virtues that correspond to them: Citizenship,Integrity,Democracy,Rule of law,Sovereignty We are fully committed to these values and have therefore developed a code of conduct which provides guidelines for anyone affiliated with the National Bloc, requiring them to behave in a respectful and responsible manner in all aspects of their lives.",
+    "labels": [
+      "Political",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/Nationalbloc.lb/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/Nationalbloc_lb/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/Nationalbloc_lb"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 0
+    }
+  },
+  {
+    "image": {
+      "src": "https://www.bassma.org/Content/images/ilogo.png",
+      "backgroundColor": "gray"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.bassma.org/DonateNow"
+      },
+      {
+        "type": 1,
+        "src": "https://www.bassma.org/ContactUs"
+      }
+    ],
+    "name": "Bassma",
+    "location": "Lebanon",
+    "website": "https://www.bassma.org/",
+    "description": "BASSMA is an organization deeply committed to providing empathetic care and the highest quality of services to children and families in need. Since 2002, BASSMA has taken great satisfaction in leading the Human Services field toward an innovative, family-focused treatment model resulting in family supports and permanency planning. Through its programs, BASSMA's objective is to empower the most deprived families, leading them from a dramatic situation A, to a situation B where the family can finally enjoy life and live in dignity. BASSMA is currently in the process of rehabilitating 200 underprivileged families per year and leading them to self-sufficiency.",
+    "labels": [
+      "Health",
+      "Education",
+      "Food",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/bassmalb/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/bassmalb/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/bassmalb?lang=en"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 1
+    }
+  },
+  {
+    "image": {
+      "src": "https://foodblessed.org/wp-content/uploads/2016/08/fb-logo-small.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://foodblessed.org/donate/"
+      },
+      {
+        "type": 1,
+        "src": "https://foodblessed.org/contact/"
+      }
+    ],
+    "name": "Food Blessed",
+    "location": "Lebanon",
+    "website": "https://foodblessed.org/",
+    "description": "Co-founded in 2012, FoodBlessed is a local hunger-relief initiative that works with businesses and the civil society to reduce the number of people going hungry in Lebanon. The community-based, volunteer-driven food rescue program provides an effective and efficient solution to hunger, while addressing the serious and growing problem of food waste in Lebanon.\nWe distribute free meals and FoodBlessed Food Assistance Packages (FAPs) to those in need, ask the community to be more mindful of the food they let go to waste by offering them with practical solutions to cut down on their food waste generation and providing them with the opportunity to serve food to those in need through volunteering via the concept of Social Responsibility including Individual Social Responsibility (IR) and Corporate Social Responsiblity (CSR).",
+    "labels": [
+      "Food",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/FoodBlessed"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/foodblessed/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/foodblessed"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 2
+    }
+  },
+  {
+    "image": {
+      "src": "https://www.nusaned.org/assets/img/logo.png",
+      "backgroundColor": "black"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.nusaned.org/en/donate"
+      },
+      {
+        "type": 1,
+        "src": "https://www.nusaned.org/en/contact"
+      }
+    ],
+    "name": "Nusaned",
+    "location": "Lebanon",
+    "website": "https://www.nusaned.org/",
+    "description": "Nusaned is a humanitarian, community-based and volunteer organization.  We believe that the power to create change comes from working collaboratively. Nusaned does not engage in any political activity, and remains at equal distance from all religions.  We support communities based on a non-biased, egalitarian and value-based needs assessment process. As the Lebanese economy struggled, businesses shuttered, unemployment rates reached unprecedented levels, and poverty numbers spiked, the management team at Sirajart unanimously agreed to divert the company’s commitment and energy towards charitable social work. Their move was envisioned as an integral part of their corporate social responsibility.",
+    "labels": [
+      "Social",
+      "Enviromnent",
+      "Economic",
+      "Partners",
+      "Volunteers"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/Nusaned/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/nusaned/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 3
+    }
+  },
+  {
+    "image": {
+      "src": "https://images.squarespace-cdn.com/content/5e03700f2127d914d25a1468/1577283631669-BHGD0Y3HVRGLSUJNCAJC/lebanon+needs+-+logo.png?content-type=image%2Fpng",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.lebanonneeds.org/donate"
+      }
+    ],
+    "name": "Lebanon Needs",
+    "location": "Lebanon",
+    "website": "https://www.lebanonneeds.org",
+    "description": "Lebanon Needs is a non-profit organization founded in 2019 dedicated to creating and delivering sustainable healthcare solutions for impoverished and underserved Lebanese. Lebanon Needs is based on a holistic healthcare approach that tackles the social determinants of health",
+    "labels": [
+      "Healthcare",
+      "Housing",
+      "Food."
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/lebanonneeds2019"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/lebanonneeds/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/lebanonneeds/"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 4
+    }
+  },
+  {
+    "image": {
+      "src": "https://www.himaya.org/sites/all/themes/himaya/images/logo.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://www.himaya.org/content/donate"
+      },
+      {
+        "type": 1,
+        "src": "https://www.himaya.org/content/contact-us"
+      }
+    ],
+    "name": "Himaya",
+    "location": "Lebanon",
+    "website": "https://www.himaya.org/",
+    "description": "In light of these alarming results, himaya was founded in 2008 with the notification number 748/2009. The organization has continued to grow, responding to child protection needs on a national level. The dedicated & multidisciplinary team of professionals covers all Lebanese territory with offices in Mount Lebanon, South Lebanon, North Lebanon, and the Bekaa; ensuring accessible services to children across Lebanon. In order to achieve its mission, himaya works with children as well as their families and the environment as a whole. himaya strives for a radical change on a national level in order to improve the lives of children in Lebanon.",
+    "labels": [
+      "Childcare",
+      "Education",
+      "W.A.S.H"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/himayaleb/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/himayaleb/?hl=en"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 5
     }
   }
 ]
