@@ -18,11 +18,12 @@
     "location": "Lebanon",
     "website": "https://offrejoie.org/",
     "description": "Offrejoie was born in the midst of a raging civil war in Lebanon in 1985. A group of young Red Cross volunteers worked together to help the injured. Alleviating human suffering transcended any differences between them.",
-    "labels": [
-      "Housing",
-      "Volunteers"
-    ],
+    "labels": ["Housing", "Volunteers"],
     "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/offrejoie/"
+      },
       {
         "type": "instagram",
         "src": "https://www.instagram.com/offre.joie/"
@@ -30,10 +31,6 @@
       {
         "type": "twitter",
         "src": "https://twitter.com/offrejoieliban"
-      },
-      {
-        "type": "facebook",
-        "src": "https://www.facebook.com/offrejoie/"
       }
     ],
     "meta": {
@@ -60,13 +57,8 @@
     "name": "Caritas",
     "location": "Lebanon",
     "website": "http://www.caritas.org.lb",
-    "description": "Caritas Internationalis reflects the social mission and core values of the Catholic Church. We believe in dignity, solidarity and stewardship on behalf of the world’s most vulnerable people.",        
-    "labels": [
-      "Food",
-      "Housing",
-      "Health",
-      "Volunteers"
-    ],
+    "description": "Caritas Internationalis reflects the social mission and core values of the Catholic Church. We believe in dignity, solidarity and stewardship on behalf of the world’s most vulnerable people.",
+    "labels": ["Food", "Housing", "Health", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -106,12 +98,7 @@
     "location": "Lebanon",
     "website": "http://www.redcross.org.lb",
     "description": "The Lebanese Red Cross (LRC) is a national society that was established on July 9, 1945 as an independent National Society. In 1946, it was recognized by the State as a public nonprofit organization and as an auxiliary team to the medical personnel of the Lebanese Army. The goal of the Lebanese Red Cross is to promote peace, serve the society, and alleviate human suffering with neutrality and without any racial, sexual, social, religious or political discrimination.",
-    "labels": [
-      "Health",
-      "Housing",
-      "Volunteers",
-      " First Aid"
-    ],
+    "labels": ["Health", "Housing", "Volunteers", " First Aid"],
     "socials": [
       {
         "type": "facebook",
@@ -131,7 +118,7 @@
   {
     "image": {
       "src": "https://preemptivelove.org/wp-content/themes/plc/dist/images/logo.svg",
-      "backgroundColor": "GRAY"
+      "backgroundColor": "gray"
     },
     "extra": [
       {
@@ -147,12 +134,7 @@
     "location": "Lebanon",
     "website": "https://preemptivelove.org",
     "description": "We exist to end war. To heal all that is tearing us apart. We help fast with help that lasts on the frontlines of war, violence, and division. We heal the past, reaching across enemy lines to build relationships and learn from each other.\nWe’re a coalition of peacemakers stretching across Iraq, Syria, the United States, and beyond, working together to unmake violence. We are first in w… See More",
-    "labels": [
-      "Food",
-      "Housing",
-      "Volunteers",
-      "Employment"
-    ],
+    "labels": ["Food", "Housing", "Volunteers", "Employment"],
     "socials": [
       {
         "type": "facebook",
@@ -192,12 +174,7 @@
     "location": "Lebanon",
     "website": "https://www.arcenciel.org",
     "description": "arcenciel is a Lebanese based non-profit organization established in 1985 during the Lebanese civil war. It was recognized as a public interest NGO in 1995 by Presidential Decree N7541. With five core programs, being implemented at 12 centers across Lebanon, arcenciel’s main goal is to work with every person in need. arcenciel aims to vigorously advance national policies in all the sectors in which it is active, while keeping a non-confessional and apolitical stance.",
-    "labels": [
-      "Food",
-      "Housing",
-      "Volunteers",
-      "Empowerment"
-    ],
+    "labels": ["Food", "Housing", "Volunteers", "Empowerment"],
     "socials": [
       {
         "type": "facebook",
@@ -217,7 +194,7 @@
   {
     "image": {
       "src": "./assets/images/organizations/beit-el-baraka.png",
-      "backgroundColor": "white"
+      "backgroundColor": "black"
     },
     "extra": [
       {
@@ -229,12 +206,7 @@
     "location": "Lebanon",
     "website": "https://www.beitelbaraka.org",
     "description": "Our Mission is to ensure a sense of dignity to hard-working citizens once they retire, by assisting them in their struggle with the increasing cost of living. In a spirit of respect and support, we aim to provide a tailor-made accurate and beneficial response to Lebanon’s economic and multi-dimensional challenges that are depriving many retired citizens of their most basic needs and rights.",
-    "labels": [
-      "Food",
-      "Housing",
-      "Health",
-      "Volunteers"
-    ],
+    "labels": ["Food", "Housing", "Health", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -270,10 +242,7 @@
     "location": "Lebanon",
     "website": "https://livelove.org/",
     "description": "We build communities to create hope and positive impact for Nature, Society and Culture in cities around the world. We believe in You(th) and think positive storytelling can change the world, and create engaged citizens who are in love with their planet, and want to create shared solutions to shared problems.",
-    "labels": [
-      "Housing",
-      "Volunteers"
-    ],
+    "labels": ["Housing", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -309,10 +278,7 @@
     "location": "Lebanon",
     "website": "https://lebanesefoodbank.org",
     "description": "Our mission is to fight and overcome hunger by developing effective Feeding Programs to eliminate hunger. A non-profit organization (# 1596) established by a group of Lebanese businessmen to eliminate hunger in all Lebanon by establishing partnerships and cooperation with all those who are concerned.",
-    "labels": [
-      "Food",
-      ""
-    ],
+    "labels": ["Food", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -352,10 +318,7 @@
     "location": "Lebanon",
     "website": "https://embracelebanon.org/",
     "description": "Embrace branched out as an independent Lebanese non-governmental organisation (NGO), not affiliated with any institution. Embrace seeks to better inform the community about mental illness, break the stigma, provide support to those affected, and help foster a resilient and emotionally healthy community which cares for the mental wellbeing of its young and old.",
-    "labels": [
-      "Health",
-      "Volunteers"
-    ],
+    "labels": ["Health", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -385,11 +348,8 @@
     "name": "Bedayati",
     "location": "Lebanon",
     "website": "http://www.bedayati.org/",
-    "description": "Bedayati is a new social sector organization that works to empower marginalized youth to access decent and sustainable employment, responding to their aspirations for change. We envision an inclusive world of work where diversity is valued and where everyone has the opportunity to participate and make a change.",
-    "labels": [
-      "Employment",
-      ""
-    ],
+    "description": "Bedayati is a new social sector organization that works to empower marginalized youth to access decent and sustainable employment, responding to their aspirations for change. We envision an inclusive world of work where diversity is valued and where everyone has the opportunity to participate and make a change. We partner with a range of organizations to build diverse and inclusive workplaces, advocating an inclusive economy that works for everyone.",
+    "labels": ["Employment", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -429,11 +389,7 @@
     "location": "Lebanon",
     "website": "https://www.tahaddilebanon.org/",
     "description": "Tahaddi Lebanon is a registered non-profit organization that seeks to respond to the challenges of extreme poverty by facilitating access to education, health and social services.",
-    "labels": [
-      "Education",
-      "Culture",
-      "Health"
-    ],
+    "labels": ["Education", "Culture", "Health"],
     "socials": [
       {
         "type": "facebook",
@@ -465,10 +421,7 @@
     "location": "Lebanon",
     "website": "https://openhouseslebanon.online/",
     "description": "Providing houses 🏠 for people in need in lebanon during the explosion.",
-    "labels": [
-      "Housing",
-      ""
-    ],
+    "labels": ["Housing", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -504,10 +457,7 @@
     "location": "Lebanon",
     "website": "https://dsclebanon.org/",
     "description": "DSC is a non-governmental, non-profit organization founded on the principles of empathy, compassion, humility, and sacrifice. We are not politically aligned. We are not religiously affiliated. Our only commitment is to humanity. DSC links patients in need of blood donations and those who are willing to donate.",
-    "labels": [
-      "Health",
-      ""
-    ],
+    "labels": ["Health", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -543,10 +493,7 @@
     "location": "Lebanon",
     "website": "https://en.nationalbloc.org/",
     "description": "Our goal is a prosperous, green and fair Lebanon, and to achieve it we must together eliminate the five wounds and express the virtues that correspond to them: Citizenship,Integrity,Democracy,Rule of law,Sovereignty We are fully committed to these values and have therefore developed a code of conduct which provides guidelines for anyone affiliated with the National Bloc, requiring them to behave in a respectful and responsible manner in all aspects of their lives.",
-    "labels": [
-      "Political",
-      "Volunteers"
-    ],
+    "labels": ["Political", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -564,7 +511,7 @@
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 0
+      "cardId": 13
     }
   },
   {
@@ -586,12 +533,7 @@
     "location": "Lebanon",
     "website": "https://www.bassma.org/",
     "description": "BASSMA is an organization deeply committed to providing empathetic care and the highest quality of services to children and families in need. Since 2002, BASSMA has taken great satisfaction in leading the Human Services field toward an innovative, family-focused treatment model resulting in family supports and permanency planning. Through its programs, BASSMA's objective is to empower the most deprived families, leading them from a dramatic situation A, to a situation B where the family can finally enjoy life and live in dignity. BASSMA is currently in the process of rehabilitating 200 underprivileged families per year and leading them to self-sufficiency.",
-    "labels": [
-      "Health",
-      "Education",
-      "Food",
-      "Volunteers"
-    ],
+    "labels": ["Health", "Education", "Food", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -609,7 +551,7 @@
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 1
+      "cardId": 14
     }
   },
   {
@@ -630,11 +572,8 @@
     "name": "Food Blessed",
     "location": "Lebanon",
     "website": "https://foodblessed.org/",
-    "description": "Co-founded in 2012, FoodBlessed is a local hunger-relief initiative that works with businesses and the civil society to reduce the number of people going hungry in Lebanon. The community-based, volunteer-driven food rescue program provides an effective and efficient solution to hunger, while addressing the serious and growing problem of food waste in Lebanon.\nWe distribute free meals and FoodBlessed Food Assistance Packages (FAPs) to those in need, ask the community to be more mindful of the food they let go to waste by offering them with practical solutions to cut down on their food waste generation and providing them with the opportunity to serve food to those in need through volunteering via the concept of Social Responsibility including Individual Social Responsibility (IR) and Corporate Social Responsiblity (CSR).",
-    "labels": [
-      "Food",
-      "Volunteers"
-    ],
+    "description": "Co-founded in 2012, FoodBlessed is a local hunger-relief initiative that works with businesses and the civil society to reduce the number of people going hungry in Lebanon. The community-based, volunteer-driven food rescue program provides an effective and efficient solution to hunger, while addressing the serious and growing problem of food waste in Lebanon.\nWe distribute free meals and FoodBlessed Food Assistance  Packages (FAPs) to those in need, ask the community to be more mindful of the food they let go to waste by offering them with practical solutions to cut down on their food waste generation and providing them with the opportunity to serve food to those in need through volunteering via the concept of Social Responsibility including Individual Social Responsibility (IR) and Corporate Social Responsiblity (CSR).",
+    "labels": ["Food", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -652,7 +591,7 @@
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 2
+      "cardId": 15
     }
   },
   {
@@ -674,13 +613,7 @@
     "location": "Lebanon",
     "website": "https://www.nusaned.org/",
     "description": "Nusaned is a humanitarian, community-based and volunteer organization.  We believe that the power to create change comes from working collaboratively. Nusaned does not engage in any political activity, and remains at equal distance from all religions.  We support communities based on a non-biased, egalitarian and value-based needs assessment process. As the Lebanese economy struggled, businesses shuttered, unemployment rates reached unprecedented levels, and poverty numbers spiked, the management team at Sirajart unanimously agreed to divert the company’s commitment and energy towards charitable social work. Their move was envisioned as an integral part of their corporate social responsibility.",
-    "labels": [
-      "Social",
-      "Enviromnent",
-      "Economic",
-      "Partners",
-      "Volunteers"
-    ],
+    "labels": ["Social", "Enviromnent", "Economic", "Partners", "Volunteers"],
     "socials": [
       {
         "type": "facebook",
@@ -694,7 +627,7 @@
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 3
+      "cardId": 16
     }
   },
   {
@@ -711,12 +644,8 @@
     "name": "Lebanon Needs",
     "location": "Lebanon",
     "website": "https://www.lebanonneeds.org",
-    "description": "Lebanon Needs is a non-profit organization founded in 2019 dedicated to creating and delivering sustainable healthcare solutions for impoverished and underserved Lebanese. Lebanon Needs is based on a holistic healthcare approach that tackles the social determinants of health",
-    "labels": [
-      "Healthcare",
-      "Housing",
-      "Food."
-    ],
+    "description": "Lebanon Needs is a non-profit organization founded in 2019 dedicated to creating and delivering sustainable healthcare solutions for impoverished and underserved Lebanese. Lebanon Needs is based on a  holistic healthcare approach that tackles the social determinants of health",
+    "labels": ["Healthcare", "Housing", "Food."],
     "socials": [
       {
         "type": "facebook",
@@ -727,14 +656,14 @@
         "src": "https://www.instagram.com/lebanonneeds/"
       },
       {
-        "type": "instagram",
-        "src": "https://www.instagram.com/lebanonneeds/"
+        "type": "twitter",
+        "src": "https://twitter.com/lebanonneeds"
       }
     ],
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 4
+      "cardId": 17
     }
   },
   {
@@ -755,12 +684,8 @@
     "name": "Himaya",
     "location": "Lebanon",
     "website": "https://www.himaya.org/",
-    "description": "In light of these alarming results, himaya was founded in 2008 with the notification number 748/2009. The organization has continued to grow, responding to child protection needs on a national level. The dedicated & multidisciplinary team of professionals covers all Lebanese territory with offices in Mount Lebanon, South Lebanon, North Lebanon, and the Bekaa; ensuring accessible services to children across Lebanon. In order to achieve its mission, himaya works with children as well as their families and the environment as a whole. himaya strives for a radical change on a national level in order to improve the lives of children in Lebanon.",
-    "labels": [
-      "Childcare",
-      "Education",
-      "W.A.S.H"
-    ],
+    "description": "In light of these alarming results, himaya was founded in 2008 with the notification number 748/2009. The organization has continued to grow, responding to child protection needs on a national level.  The dedicated & multidisciplinary team of professionals covers all Lebanese territory with offices in Mount Lebanon, South Lebanon, North Lebanon, and the Bekaa; ensuring accessible services to children across Lebanon. In order to achieve its mission, himaya works with children as well as their families and the environment as a whole. himaya strives for a radical change on a national level in order to improve the lives of children in Lebanon.",
+    "labels": ["Childcare", "Education", "W.A.S.H"],
     "socials": [
       {
         "type": "facebook",
@@ -774,7 +699,95 @@
     "meta": {
       "by": "Helb",
       "date": "02/09/20",
-      "cardId": 5
+      "cardId": 18
+    }
+  },
+  {
+    "image": {
+      "src": "https://urda-lb.org/wp-content/uploads/2019/05/cropped-Logo-urda-.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://urda-lb.org/collaborate/donate-now/"
+      },
+      {
+        "type": 1,
+        "src": "https://urda-lb.org/en/contact/"
+      }
+    ],
+    "name": "U.R.D.A",
+    "location": "Lebanon",
+    "website": "https://urda-lb.org/",
+    "description": "We aspire to become the safest refuge for all the disadvantaged individuals in Lebanon. Working to the highest of international professional standards, we thrive to serve as a role model in sustainable humanitarian actions, and more essentially, we reinforce a human development system that would lead to building a renewed civil society across Lebanon.",
+    "labels": [
+      "Relief",
+      "Shelter",
+      "Healthcare",
+      "Education",
+      "Protection",
+      "Development",
+      "Sponsorship"
+    ],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/URDA.NGO/"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/urda.ngo/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/urda_en"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 19
+    }
+  },
+  {
+    "image": {
+      "src": "https://cccl.org.lb/images/logo-wide.png",
+      "backgroundColor": "white"
+    },
+    "extra": [
+      {
+        "type": 0,
+        "src": "https://cccl.org.lb/c/8/Get-Involved"
+      },
+      {
+        "type": 1,
+        "src": "https://cccl.org.lb/Contact-Us"
+      }
+    ],
+    "name": "Children Cancer Center",
+    "location": "Lebanon",
+    "website": "https://www.cccl.org.lb/",
+    "description": "To support all children with cancer and their families through securing funds to:\n- Have access to the latest treatment regardless of the parent’s ability to pay.\n- Excellence in psychosocial services to help fight the disease.\n- Education to create better understanding and awareness.\n Provide access to free treatment and care to all children with cancer in Lebanon and the region, without any discrimination.",
+    "labels": ["Childcare", "Healthcare"],
+    "socials": [
+      {
+        "type": "facebook",
+        "src": "https://www.facebook.com/CCCLebanon"
+      },
+      {
+        "type": "instagram",
+        "src": "https://www.instagram.com/CCCLebanon/"
+      },
+      {
+        "type": "twitter",
+        "src": "https://twitter.com/CCCLebanon"
+      }
+    ],
+    "meta": {
+      "by": "Helb",
+      "date": "02/09/20",
+      "cardId": 20
     }
   }
 ]
