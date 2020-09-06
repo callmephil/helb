@@ -13,6 +13,8 @@ import {
 import ProfileCard from "./Components/ProfileCard";
 import MyContributionTable from "./Components/MyContributionTable";
 import PageHeadings from "../Components/PageHeadings";
+import { getTypeFromUrl } from "../../Utils/Script";
+import { CardWrapper } from "../Campaigns/CampaignsPage";
 
 const options = [
   { key: "c", text: "Campaign", value: "campaign" },
@@ -24,14 +26,16 @@ const options = [
 // detect type
 // wait for url to trigger second column
 function Example() {
-  const [contributionType, setContributionType] = useState('');
-  const [websiteUrl, setWebsiteUrl] = useState('');
+  const [contributionType, setContributionType] = useState(null);
+  const [websiteUrl, setWebsiteUrl] = useState(null);
   const [validation, setValidation] = useState(false);
-  const [type, ] = useState('')
+  const [type, setType] = useState(null)
 
   const handleSubmit = () => {
-
-    // const type = getTypeFromUrl(link);
+    if (contributionType === 'campaign') {
+      const type = getTypeFromUrl(websiteUrl);
+      setType(type);
+    }
     setValidation(true);
   }
 
@@ -40,7 +44,8 @@ function Example() {
     <PageHeadings title="Simple Contribution" description={`Campaigns, Events`}>
       <Container style={{ padding: "1rem", textAlign: "left" }}>
         <Grid stackable columns={2}>
-          <Grid.Column>
+          <Grid.Column textAlign="center">
+            <h1>Fill the form</h1>
             <Form onSubmit={() => handleSubmit()}>
                 <Form.Select
                   required
@@ -48,7 +53,8 @@ function Example() {
                   options={options}
                   label="Contribution Type"
                   placeholder="Contribution Type"
-                  onChange={(e) => setContributionType(e.target.value)}
+                  selection
+                  onChange={(e, data) => setContributionType(data.value)}
                 />
                 <Form.Input
                   required
@@ -58,12 +64,13 @@ function Example() {
                   onChange={(e) => setWebsiteUrl(e.target.value)}
                   id="form-subcomponent-shorthand-input-last-name"
                 />
-                <Button type='submit'>Submit</Button>
+                <Button fluid type='submit'>Preview</Button>
             </Form>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column textAlign="center">
+            <h1>Preview</h1>
             {validation &&
-              <CardWrapper key={link} type={type} url={link} labels={labels} />
+              <CardWrapper type={type} url={websiteUrl} labels={[]} />
           }
           </Grid.Column>
         </Grid>

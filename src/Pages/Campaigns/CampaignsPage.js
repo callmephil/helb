@@ -12,7 +12,7 @@ export function CardWrapper({ type, url, labels }) {
   const [{ data, loading, error }] = useAxios(`https://helbpipeline.herokuapp.com/${type}/${encodeURIComponent(url)}`);
 
   if (loading) return <CardSkeleton />;
-  if (error) return <Fragment />; 
+  if (error) return <p>error</p>; 
 
   if (data === null) return <Fragment />; 
 
