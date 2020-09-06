@@ -107,3 +107,14 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
   margin: inherit 0 !important;
 }
 /* Bootstrap End */
+
+
+.form-container-scale {
+  width: 70% !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-container-scale {
+    width: 90% !important;
+  }
+}
