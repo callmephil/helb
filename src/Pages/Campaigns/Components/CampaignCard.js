@@ -142,7 +142,7 @@ export function CampaignCardTwo({
   };
 
   return (
-    <Card>
+    <Card fluid>
       <CardHeader />
       <Image
         {...redirectReducer}

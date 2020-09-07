@@ -3,8 +3,10 @@ import { Grid, Header, Button, Container } from "semantic-ui-react";
 import ProfileCard from "./Components/ProfileCard";
 import MyContributionTable from "./Components/MyContributionTable";
 import PageHeadings from "../Components/PageHeadings";
+import FormContributionSimple from "./Components/Forms/FormContributionSimple";
 
-function ProfileContributionAction() {
+function ProfileContributionAction({ setFormComponent, setVisible }) {
+  const example = <FormContributionSimple />;
   return (
     <Grid celled="internally" columns="equal" stackable>
       <Grid.Row textAlign="center">
@@ -13,9 +15,16 @@ function ProfileContributionAction() {
             Simple Contribution
           </Header>
           <p style={{ fontSize: "1em" }}>
-            You found something interesting you would like to share? Click the button below. best fit for events and memorials.
+            You found something interesting you would like to share? Click the button below. best
+            fit for events and memorials.
           </p>
-          <Button size="huge" color="blue">
+          <Button
+            size="huge"
+            color="blue"
+            onClick={() => {
+              setVisible(true);
+              setFormComponent(example);
+            }}>
             Contribute
           </Button>
         </Grid.Column>
@@ -24,8 +33,8 @@ function ProfileContributionAction() {
             Advanced Contribution
           </Header>
           <p style={{ fontSize: "1em" }}>
-            If you're an activist or an advanced user, you can contribute by adding Organizations and
-            much more...
+            If you're an activist or an advanced user, you can contribute by adding Organizations
+            and much more...
           </p>
           <Button size="huge" color="black">
             Contribute
@@ -36,7 +45,7 @@ function ProfileContributionAction() {
   );
 }
 
-export default function ProfilePage() {
+export default function ProfilePage({ setFormComponent, setVisible }) {
   return (
     <Container style={{ padding: "4em 0em" }}>
       <PageHeadings title="Profile Page" description={``}>
@@ -55,7 +64,10 @@ export default function ProfilePage() {
               <PageHeadings
                 title="Contribute"
                 description={`Your Contributions Helps Helb helping others by providing them rapid and reliable informations. Choose below how you would like to help helb improve its content.`}>
-                <ProfileContributionAction />
+                <ProfileContributionAction
+                  setFormComponent={setFormComponent}
+                  setVisible={setVisible}
+                />
               </PageHeadings>
             </Grid.Column>
           </Grid.Row>

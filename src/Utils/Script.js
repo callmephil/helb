@@ -1,4 +1,9 @@
 export const getTypeFromUrl = (url = "") => {
-  const regex = /\.([A-z]*)\./;
-  return url.match(regex)[1];
+  try {
+    const regex = /\.([A-z]*)\./;
+    return url.match(regex)[1];
+  } catch (e) {
+    console.error(e.message);
+    return 'unknown';
+  }
 };

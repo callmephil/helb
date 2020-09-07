@@ -163,7 +163,7 @@ function MobileContainer({ children }) {
           {_.map(rightItems, (item) => {
             if (item?.sub) {
               return (
-                <Dropdown key={item.name} item text={item.name} position>
+                <Dropdown key={item.name} item text={item.name}>
                   <Dropdown.Menu>
                     {_.map(item.sub, (sub) => (
                       <Dropdown.Item
