@@ -1,86 +1,12 @@
-import React , { useState } from "react";
-import {
-  Grid,
-  Header,
-  Button,
-  Container,
-  Image,
-  Segment,
-  Form,
-  Select,
-  Input,
-} from "semantic-ui-react";
+import React from "react";
+import { Grid, Header, Button, Container } from "semantic-ui-react";
 import ProfileCard from "./Components/ProfileCard";
 import MyContributionTable from "./Components/MyContributionTable";
 import PageHeadings from "../Components/PageHeadings";
-import { getTypeFromUrl } from "../../Utils/Script";
-import { CardWrapper } from "../Campaigns/CampaignsPage";
-
-const options = [
-  { key: "c", text: "Campaign", value: "campaign" },
-  { key: "e", text: "Event", value: "event" },
-  { key: "o", text: "Other", value: "other" },
-];
-
-
-// detect type
-// wait for url to trigger second column
-function Example() {
-  const [contributionType, setContributionType] = useState(null);
-  const [websiteUrl, setWebsiteUrl] = useState(null);
-  const [validation, setValidation] = useState(false);
-  const [type, setType] = useState(null)
-
-  const handleSubmit = () => {
-    if (contributionType === 'campaign') {
-      const type = getTypeFromUrl(websiteUrl);
-      setType(type);
-    }
-    setValidation(true);
-  }
-
-
-  return (
-    <PageHeadings title="Simple Contribution" description={`Campaigns, Events`}>
-      <Container style={{ padding: "1rem", textAlign: "left" }}>
-        <Grid stackable columns={2}>
-          <Grid.Column textAlign="center">
-            <h1>Fill the form</h1>
-            <Form onSubmit={() => handleSubmit()}>
-                <Form.Select
-                  required
-                  value={contributionType}
-                  options={options}
-                  label="Contribution Type"
-                  placeholder="Contribution Type"
-                  selection
-                  onChange={(e, data) => setContributionType(data.value)}
-                />
-                <Form.Input
-                  required
-                  label="Website URL"
-                  value={websiteUrl}
-                  placeholder="Website URL"
-                  onChange={(e) => setWebsiteUrl(e.target.value)}
-                  id="form-subcomponent-shorthand-input-last-name"
-                />
-                <Button fluid type='submit'>Preview</Button>
-            </Form>
-          </Grid.Column>
-          <Grid.Column textAlign="center">
-            <h1>Preview</h1>
-            {validation &&
-              <CardWrapper type={type} url={websiteUrl} labels={[]} />
-          }
-          </Grid.Column>
-        </Grid>
-      </Container>
-    </PageHeadings>
-  );
-};
+import FormContributionSimple from "./Components/Forms/FormContributionSimple";
 
 function ProfileContributionAction({ setFormComponent, setVisible }) {
-  const example = <Example />
+  const example = <FormContributionSimple />;
   return (
     <Grid celled="internally" columns="equal" stackable>
       <Grid.Row textAlign="center">

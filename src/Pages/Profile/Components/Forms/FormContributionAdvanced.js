@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function FormContribution() {
+export default function FormContributionAdvanced() {
     return (
         <div>
             

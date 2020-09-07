@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Loader, Card, Image } from "semantic-ui-react";
 
 export default function CardSkeleton() {
-  
   const textHolderWithLoader = () => {
     return (
       <Fragment>
@@ -16,12 +15,5 @@ export default function CardSkeleton() {
     return <Image src="https://react.semantic-ui.com/images/wireframe/white-image.png" />;
   };
 
-  return (
-    <Fragment>
-      <Card
-        image={imageHolder}
-        description={textHolderWithLoader}
-      />
-    </Fragment>
-  );
+  return <Card fluid image={imageHolder} description={textHolderWithLoader} />;
 }

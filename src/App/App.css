@@ -113,7 +113,7 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
   width: 70% !important;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   .form-container-scale {
     width: 90% !important;
   }
