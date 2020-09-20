@@ -78,7 +78,6 @@ export default function FormContributionSimple() {
               />
               <Form.Group widths="equal">
                 <Form.Select
-                  width={6}
                   required
                   value={contributionType}
                   options={options}
