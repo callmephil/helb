@@ -22,6 +22,7 @@ const leftItems = [
   { to: "/campaigns", name: "Campaigns" },
   { to: "/events", name: "Events" },
   { to: "/memorial", name: "Memorial" },
+  { to: "/laws", name: "Laws" },
 ];
 
 const rightItems = [

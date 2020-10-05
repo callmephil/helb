@@ -118,3 +118,9 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
     width: 90% !important;
   }
 }
+
+
+.labels {
+  margin-top: 1rem !important;
+  margin-right: 0.7rem !important;
+}

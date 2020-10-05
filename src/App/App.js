@@ -17,6 +17,7 @@ import HealthCarePage from "../Pages/VolunteersPage/HealthCarePage";
 import RenovationsPage from "../Pages/VolunteersPage/RenovationsPage";
 import HousingPage from "../Pages/VolunteersPage/HousingPage";
 import FormContainer from "./Components/FormContainer";
+import LawPage from "../Pages/Laws/LawPage";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -32,6 +33,7 @@ function App() {
               <Route path="/campaigns" exact render={() => <CampaignsPage />} />
               <Route path="/events" exact render={() => <EventsPage />} />
               <Route path="/memorial" exact render={() => <MemorialPage />} />
+              <Route path="/laws" exact render={() => <LawPage />} />
               <Route path="/volunteers/health" exact render={() => <HealthCarePage />} />
               <Route path="/volunteers/renovation" exact render={() => <RenovationsPage />} />
               <Route path="/volunteers/housing" exact render={() => <HousingPage />} />
