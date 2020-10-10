@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container } from "semantic-ui-react";
+import { Container, Image } from "semantic-ui-react";
 import PageHeadings from "../Components/PageHeadings";
 import SearchExampleCategory from "./Components/Filter";
 import LawList from "./Components/LawList";
@@ -10,7 +10,7 @@ const initialState = [
     content: "First Content Law",
     definition: "This is the first law",
     usages: "this is applied all the time",
-    tags: ["health", "energy"],
+    tags: ["health", "energy", "education"],
   },
   {
     title: "Second Law",
@@ -24,12 +24,13 @@ const initialState = [
     content: "Third Content Law",
     definition: "This is the Third law",
     usages: "this is applied all the time",
-    tags: ["health", "energy"],
+    tags: ["health"],
   },
 ];
 
 export default function LawPage() {
   const [state, setstate] = useState(initialState)
+  const [noResult, setNoResults] = useState(false);
 
   return (
     <Container style={{ padding: "4em 0em" }}>
@@ -43,9 +44,23 @@ export default function LawPage() {
           est laborum.`}
       />
 
-      <SearchExampleCategory source={initialState} _setResults={setstate} />
+      <SearchExampleCategory source={initialState} _setResults={setstate} setNoResults={setNoResults} />
 
       <LawList laws={state} />
+
+      {noResult && (
+        <Container textAlign="center">
+          <Image size="medium" src={`./assets/images/search-empty-icon.svg`} wrapped />
+          <div style={{ textAlign: "center", fontWeight: 400, fontFamily: "Muli" }}>
+            <p style={{ margin: "0", fontSize: "24px", color: "#242e4cm" }}>
+              Sorry we couldn't find any matches
+            </p>
+            <p style={{ fontSize: "16px", color: "#7d7a9e" }}>
+              Please try searching with another term
+            </p>
+          </div>
+        </Container>
+      )}
     </Container>
   );
 }

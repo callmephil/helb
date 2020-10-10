@@ -1,61 +1,112 @@
 import _ from "lodash";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, Fragment, useEffect } from "react";
+import { Form } from "semantic-ui-react";
 
-export default function SearchFunction({ source, _setResults }) {
-  const [resultLength, setResultLength] = useState(-1);
+const searchFilter = (source = [], keyword = "") => {
+  const re = new RegExp(_.escapeRegExp(keyword), "i");
+  const isMatch = (res) => re.test(res);
+  console.log("call", keyword);
+  return _.filter(source, isMatch);
+};
+
+const objectReducer = (src = []) => {
+  return src.map((element) => {
+    let string = "";
+    for (const property in element) {
+      string = `${string} ${element[property]}`;
+    }
+    return string.trim();
+  });
+};
+
+const findBestMatch = (indexes) => {
+  return indexes.reduce((a, b) => ({ ...a, [b]: (a[b] || 0) + 1 }), {});
+};
+
+export default function SearchFunction({ source, _setResults, setNoResults }) {
   const [searchTerm, setSearchTerm] = useState("");
+  const [hasResult, setHasResult] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
-  const debounceSearch = useRef(
-    _.debounce((searchTerm) => {
-      const re = new RegExp(_.escapeRegExp(searchTerm), "i");
-      const isMatch = (result) => re.test(result.title);
-      const filteredResults = _.filter(source, isMatch);
-      _setResults(filteredResults);
-      setResultLength(filteredResults.length);
-      setIsSearching(false);
-    }, 1000)
-  );
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setIsSearching(true);
 
-  useEffect(
-    () => {
-      if (searchTerm.length > 0) {
-        setIsSearching(true);
-        debounceSearch.current(searchTerm);
-      } else {
-        _setResults(source);
-        setResultLength(-1);
-      }
-    },
-    [searchTerm, source, _setResults] // Only call effect if debounced search term changes
-  );
+    if (searchTerm) {
+      const result = [];
+      const splitted = new Set(searchTerm.split(" ").map((s) => s.trim()));
 
-  const DynamicIcon = () => {
-    switch (true) {
-      case resultLength > 0:
-        return <i className="green check icon" />;
-      case resultLength === 0:
-        return <i className="red close icon" />;
-      default:
-        return <i className="search icon" />;
+      const parseList = objectReducer(source);
+
+      splitted.forEach((keyword) => {
+        const res = searchFilter(parseList, keyword);
+        const index = res
+          .map((res) => parseList.findIndex((str) => str === res))
+          .filter((i) => i !== -1);
+        result.push(...index);
+      });
+
+      const matchesScore = findBestMatch(result);
+
+      const list = [...new Set(result)]
+        .map((index) => {
+          return {
+            ...source[index],
+            score: matchesScore[index],
+          };
+        })
+        .sort((a, b) => (a.score > b.score ? -1 : 1));
+
+      // splitted.forEach((keyword) => {
+      //   filters.forEach((filter) => {
+      //     const res = searchFilter(source, filter, keyword);
+      //     result.push(...res);
+      //   });
+      // });
+
+      setHasResult(list.length > 0);
+      _setResults(list);
     }
   };
 
-  const loadingClassName = isSearching ? "loading" : "";
+  const handleClear = (event) => {
+    setSearchTerm("");
+    _setResults(source);
+    setHasResult(false);
+    setIsSearching(false);
+  };
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    if (event.target.value === "") handleClear();
+    else setSearchTerm(event.target.value);
+  };
+
+
+  useEffect(() => {
+    setNoResults(!hasResult && isSearching);
+  }, [setNoResults, hasResult, isSearching]);
+
+  // bug
+  // useEffect(() => {
+  //   if (isSearching)
+  //     setIsSearching(false);
+  // }, [searchTerm, isSearching])
+
   return (
-    <div style={{ padding: "10px 0" }}>
-      <div className={`ui ${loadingClassName} search`}>
-        <div className="ui icon input" style={{ width: "100%" }}>
-          <input
-            type="text"
-            className="prompt"
+    <Fragment>
+      <Form onSubmit={handleSearch}>
+        <Form.Group widths="equal">
+          <Form.Input
+            fluid
+            width="14"
+            icon="search"
             placeholder="Search..."
-            style={{ borderRadius: "0" }}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleChange}
           />
-          <DynamicIcon />
-        </div>
-      </div>
-    </div>
+          <Form.Button type="submit" fluid width="2" content="Search" />
+        </Form.Group>
+      </Form>
+    </Fragment>
   );
 }
