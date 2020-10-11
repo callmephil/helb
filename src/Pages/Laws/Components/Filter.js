@@ -57,13 +57,6 @@ export default function SearchFunction({ source, _setResults, setNoResults }) {
         })
         .sort((a, b) => (a.score > b.score ? -1 : 1));
 
-      // splitted.forEach((keyword) => {
-      //   filters.forEach((filter) => {
-      //     const res = searchFilter(source, filter, keyword);
-      //     result.push(...res);
-      //   });
-      // });
-
       setHasResult(list.length > 0);
       _setResults(list);
     }
@@ -82,16 +75,9 @@ export default function SearchFunction({ source, _setResults, setNoResults }) {
     else setSearchTerm(event.target.value);
   };
 
-
   useEffect(() => {
     setNoResults(!hasResult && isSearching);
   }, [setNoResults, hasResult, isSearching]);
-
-  // bug
-  // useEffect(() => {
-  //   if (isSearching)
-  //     setIsSearching(false);
-  // }, [searchTerm, isSearching])
 
   return (
     <Fragment>
