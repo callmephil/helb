@@ -17,10 +17,7 @@ const lawAccordionTab = ({ key, title, content, definition, usages, tags, score 
 
       <div>
         {_.map(tags, (tag, key) => (
-          <Label key={key} image className="labels">
-            <img src="https://react.semantic-ui.com/images/avatar/small/ade.jpg" alt="" />
-            {tag}
-          </Label>
+          <Label image key={key} className="accordion-labels" content={tag} />
         ))}
       </div>
     </div>

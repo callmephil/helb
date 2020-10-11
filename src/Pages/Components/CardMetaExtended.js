@@ -20,7 +20,7 @@ export function CardMetaStartEndDate({ start_date, end_date, textAlign = "left" 
 export function CardMetaLabels({ labels }) {
   return (
     <Card.Meta>
-      {_.map(labels, (label) => label && <Label key={label} circular basic content={label} />)}
+      {_.map(labels, (label) => label && <Label className="card-labels" key={label} content={label} />)}
     </Card.Meta>
   );
 }
