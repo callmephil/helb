@@ -5,19 +5,14 @@ import { Form } from "semantic-ui-react";
 const searchFilter = (source = [], keyword = "") => {
   const re = new RegExp(_.escapeRegExp(keyword), "i");
   const isMatch = (res) => re.test(res);
-  console.log("call", keyword);
   return _.filter(source, isMatch);
 };
 
-const objectReducer = (src = []) => {
+const stringifyObjectList = (src = []) => {
   return src.map((element) => {
-    let string = "";
-    for (const property in element) {
-      string = `${string} ${element[property]}`;
-    }
-    return string.trim();
-  });
-};
+    return JSON.stringify(element);
+  })
+}
 
 const findBestMatch = (indexes) => {
   return indexes.reduce((a, b) => ({ ...a, [b]: (a[b] || 0) + 1 }), {});
@@ -36,7 +31,7 @@ export default function SearchFunction({ source, _setResults, setNoResults }) {
       const result = [];
       const splitted = new Set(searchTerm.split(" ").map((s) => s.trim()));
 
-      const parseList = objectReducer(source);
+      const parseList = stringifyObjectList(source);
 
       splitted.forEach((keyword) => {
         const res = searchFilter(parseList, keyword);
