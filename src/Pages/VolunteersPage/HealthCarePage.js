@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageHeadings from "../Components/PageHeadings";
 import { Container } from "semantic-ui-react";
 import VolunteerCard from "./Components/VolunteerCard";
+import { SearchNotFound, SearchBar } from "../Components/SearchBar";
 
 const _struct = {
   type: "Medical Assistance",
@@ -33,6 +34,20 @@ const _struct = {
 };
 
 export default function HealthCarePage() {
+  const [result, setResults] = useState([]);
+  const [noresult, setNoResults] = useState(false);
+
+  useEffect(() => {
+  }, []);
+
+  const Render = () => {
+    return noresult ? (
+      <SearchNotFound />
+    ) : (
+      <VolunteerCard {..._struct}/>
+    );
+  };
+
   return (
     <Container style={{ padding: "4em 0em" }}>
       <PageHeadings
@@ -44,7 +59,10 @@ export default function HealthCarePage() {
                 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
                 est laborum.`}
       />
-      <VolunteerCard {..._struct}/>
+
+      <SearchBar source={result} _setResults={setResults} setNoResults={setNoResults} />
+
+      <Render />
 
     </Container>
   );

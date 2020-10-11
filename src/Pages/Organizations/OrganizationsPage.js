@@ -1,17 +1,35 @@
 import _ from "lodash";
-import React, { Fragment } from "react";
+import useAxios from "axios-hooks";
 import { Container, Card } from "semantic-ui-react";
+import PageHeadings from "../Components/PageHeadings";
+import React, { Fragment, useEffect, useState } from "react";
 import OrganizationCard from "./Components/OrganizationCard";
 import { makeKeyOfObject } from "../../Utils/ComponentHelpers";
-import PageHeadings from "../Components/PageHeadings";
-import useAxios from "axios-hooks";
+import { SearchBar, SearchNotFound } from "../Components/SearchBar";
 
 export default function OrganizationsPage() {
-  const [{data, error, loading}] = useAxios('./assets/static/organizations.json');
+  const [{ data, error, loading }] = useAxios("./assets/static/organizations.json");
+  const [result, setResults] = useState([]);
+  const [noresult, setNoResults] = useState(false);
 
-  if (error) return <Fragment />
-  if (loading) return <Fragment />
+  useEffect(() => {
+    setResults(data);
+  }, [data]);
 
+  if (error) return <Fragment />;
+  if (loading) return <Fragment />;
+
+  const Render = () => {
+    return noresult ? (
+      <SearchNotFound />
+    ) : (
+      <Card.Group stackable doubling itemsPerRow={3}>
+        {_.map(result, (card) => (
+          <OrganizationCard key={makeKeyOfObject(card)} cardContent={card} />
+        ))}
+      </Card.Group>
+    );
+  };
 
   return (
     <Container style={{ padding: "4em 0em" }}>
@@ -25,11 +43,9 @@ export default function OrganizationsPage() {
           est laborum.`}
       />
 
-      <Card.Group stackable doubling itemsPerRow={3}>
-        {_.map(data, (card) => (
-          <OrganizationCard key={makeKeyOfObject(card)} cardContent={card} />
-        ))}
-      </Card.Group>
+      <SearchBar source={data} _setResults={setResults} setNoResults={setNoResults} />
+
+      <Render />
     </Container>
   );
 }

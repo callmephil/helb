@@ -119,8 +119,11 @@ div.ui.inverted.vertical.left.visible.sidebar.menu {
   }
 }
 
+.card-labels {
+  margin: 0.15rem 0.15rem !important;
+}
 
-.labels {
+.accordion-labels {
   margin-top: 1rem !important;
   margin-right: 0.7rem !important;
 }
